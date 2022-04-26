@@ -1,0 +1,14 @@
+
+
+
+{
+    "name": "WizeBot",
+    "screen_name": "@wizebot",
+    "description": "description",
+    "location": "location",
+    "followers_count": 100,
+    "created_at": "creation",
+    "profile_background_color": "red",
+    "profile_image_url": "url",
+    "profile_background_image_url": "url"
+}

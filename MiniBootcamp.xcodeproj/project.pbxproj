@@ -9,24 +9,33 @@
 /* Begin PBXBuildFile section */
 		9A0208E3281881CF007B47CE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A0208E2281881CF007B47CE /* AppDelegate.swift */; };
 		9A0208E5281881CF007B47CE /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A0208E4281881CF007B47CE /* SceneDelegate.swift */; };
-		9A0208E7281881CF007B47CE /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A0208E6281881CF007B47CE /* ViewController.swift */; };
-		9A0208EA281881CF007B47CE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9A0208E8281881CF007B47CE /* Main.storyboard */; };
 		9A0208EC281881D0007B47CE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9A0208EB281881D0007B47CE /* Assets.xcassets */; };
 		9A0208EF281881D0007B47CE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9A0208ED281881D0007B47CE /* LaunchScreen.storyboard */; };
-		9A0208FA281881D0007B47CE /* MiniBootcampTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A0208F9281881D0007B47CE /* MiniBootcampTests.swift */; };
-		9A020904281881D0007B47CE /* MiniBootcampUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A020903281881D0007B47CE /* MiniBootcampUITests.swift */; };
-		9A020906281881D0007B47CE /* MiniBootcampUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A020905281881D0007B47CE /* MiniBootcampUITestsLaunchTests.swift */; };
+		9A020923281882BF007B47CE /* Tweet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A020913281882BE007B47CE /* Tweet.swift */; };
+		9A020924281882BF007B47CE /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A020914281882BE007B47CE /* User.swift */; };
+		9A020925281882BF007B47CE /* iOSViewControllerFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A020916281882BE007B47CE /* iOSViewControllerFactory.swift */; };
+		9A020926281882BF007B47CE /* MainCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A020917281882BE007B47CE /* MainCoordinator.swift */; };
+		9A020927281882BF007B47CE /* ViewControllerFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A020918281882BE007B47CE /* ViewControllerFactory.swift */; };
+		9A020928281882BF007B47CE /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A020919281882BE007B47CE /* Coordinator.swift */; };
+		9A020929281882BF007B47CE /* TweetTimelineAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A02091B281882BE007B47CE /* TweetTimelineAPI.swift */; };
+		9A02092A281882BF007B47CE /* Endpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A02091C281882BE007B47CE /* Endpoint.swift */; };
+		9A02092B281882BF007B47CE /* FeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A02091F281882BF007B47CE /* FeedViewController.swift */; };
+		9A02092C281882BF007B47CE /* StaticFuncs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A020921281882BF007B47CE /* StaticFuncs.swift */; };
+		9A02092D281882BF007B47CE /* UIColorExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A020922281882BF007B47CE /* UIColorExtensions.swift */; };
+		9A02093D281882D9007B47CE /* FeedViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A02092F281882D9007B47CE /* FeedViewControllerTests.swift */; };
+		9A02093E281882D9007B47CE /* MainCoordinatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A020931281882D9007B47CE /* MainCoordinatorTests.swift */; };
+		9A02093F281882D9007B47CE /* iOSViewControllerFactoryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A020932281882D9007B47CE /* iOSViewControllerFactoryTests.swift */; };
+		9A020940281882D9007B47CE /* TweetModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A020934281882D9007B47CE /* TweetModelTests.swift */; };
+		9A020941281882D9007B47CE /* UserModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A020935281882D9007B47CE /* UserModelTests.swift */; };
+		9A020942281882D9007B47CE /* EndpointTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A020937281882D9007B47CE /* EndpointTests.swift */; };
+		9A020943281882D9007B47CE /* TweetTimelineAPITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A020938281882D9007B47CE /* TweetTimelineAPITests.swift */; };
+		9A020944281882D9007B47CE /* tweetFake.json in Resources */ = {isa = PBXBuildFile; fileRef = 9A02093A281882D9007B47CE /* tweetFake.json */; };
+		9A020945281882D9007B47CE /* userFake.json in Resources */ = {isa = PBXBuildFile; fileRef = 9A02093B281882D9007B47CE /* userFake.json */; };
+		9A020946281882D9007B47CE /* StaticFuncsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A02093C281882D9007B47CE /* StaticFuncsTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
 		9A0208F6281881D0007B47CE /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 9A0208D7281881CF007B47CE /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 9A0208DE281881CF007B47CE;
-			remoteInfo = MiniBootcamp;
-		};
-		9A020900281881D0007B47CE /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 9A0208D7281881CF007B47CE /* Project object */;
 			proxyType = 1;
@@ -39,16 +48,31 @@
 		9A0208DF281881CF007B47CE /* MiniBootcamp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MiniBootcamp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9A0208E2281881CF007B47CE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9A0208E4281881CF007B47CE /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		9A0208E6281881CF007B47CE /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		9A0208E9281881CF007B47CE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		9A0208EB281881D0007B47CE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9A0208EE281881D0007B47CE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		9A0208F0281881D0007B47CE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9A0208F5281881D0007B47CE /* MiniBootcampTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MiniBootcampTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		9A0208F9281881D0007B47CE /* MiniBootcampTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MiniBootcampTests.swift; sourceTree = "<group>"; };
-		9A0208FF281881D0007B47CE /* MiniBootcampUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MiniBootcampUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		9A020903281881D0007B47CE /* MiniBootcampUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MiniBootcampUITests.swift; sourceTree = "<group>"; };
-		9A020905281881D0007B47CE /* MiniBootcampUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MiniBootcampUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		9A020913281882BE007B47CE /* Tweet.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Tweet.swift; sourceTree = "<group>"; };
+		9A020914281882BE007B47CE /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		9A020916281882BE007B47CE /* iOSViewControllerFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = iOSViewControllerFactory.swift; sourceTree = "<group>"; };
+		9A020917281882BE007B47CE /* MainCoordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainCoordinator.swift; sourceTree = "<group>"; };
+		9A020918281882BE007B47CE /* ViewControllerFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewControllerFactory.swift; sourceTree = "<group>"; };
+		9A020919281882BE007B47CE /* Coordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
+		9A02091B281882BE007B47CE /* TweetTimelineAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TweetTimelineAPI.swift; sourceTree = "<group>"; };
+		9A02091C281882BE007B47CE /* Endpoint.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Endpoint.swift; sourceTree = "<group>"; };
+		9A02091F281882BF007B47CE /* FeedViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedViewController.swift; sourceTree = "<group>"; };
+		9A020921281882BF007B47CE /* StaticFuncs.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StaticFuncs.swift; sourceTree = "<group>"; };
+		9A020922281882BF007B47CE /* UIColorExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIColorExtensions.swift; sourceTree = "<group>"; };
+		9A02092F281882D9007B47CE /* FeedViewControllerTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedViewControllerTests.swift; sourceTree = "<group>"; };
+		9A020931281882D9007B47CE /* MainCoordinatorTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainCoordinatorTests.swift; sourceTree = "<group>"; };
+		9A020932281882D9007B47CE /* iOSViewControllerFactoryTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = iOSViewControllerFactoryTests.swift; sourceTree = "<group>"; };
+		9A020934281882D9007B47CE /* TweetModelTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TweetModelTests.swift; sourceTree = "<group>"; };
+		9A020935281882D9007B47CE /* UserModelTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserModelTests.swift; sourceTree = "<group>"; };
+		9A020937281882D9007B47CE /* EndpointTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EndpointTests.swift; sourceTree = "<group>"; };
+		9A020938281882D9007B47CE /* TweetTimelineAPITests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TweetTimelineAPITests.swift; sourceTree = "<group>"; };
+		9A02093A281882D9007B47CE /* tweetFake.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = tweetFake.json; sourceTree = "<group>"; };
+		9A02093B281882D9007B47CE /* userFake.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = userFake.json; sourceTree = "<group>"; };
+		9A02093C281882D9007B47CE /* StaticFuncsTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StaticFuncsTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,13 +90,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		9A0208FC281881D0007B47CE /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -81,7 +98,6 @@
 			children = (
 				9A0208E1281881CF007B47CE /* MiniBootcamp */,
 				9A0208F8281881D0007B47CE /* MiniBootcampTests */,
-				9A020902281881D0007B47CE /* MiniBootcampUITests */,
 				9A0208E0281881CF007B47CE /* Products */,
 			);
 			sourceTree = "<group>";
@@ -91,7 +107,6 @@
 			children = (
 				9A0208DF281881CF007B47CE /* MiniBootcamp.app */,
 				9A0208F5281881D0007B47CE /* MiniBootcampTests.xctest */,
-				9A0208FF281881D0007B47CE /* MiniBootcampUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -101,8 +116,11 @@
 			children = (
 				9A0208E2281881CF007B47CE /* AppDelegate.swift */,
 				9A0208E4281881CF007B47CE /* SceneDelegate.swift */,
-				9A0208E6281881CF007B47CE /* ViewController.swift */,
-				9A0208E8281881CF007B47CE /* Main.storyboard */,
+				9A020915281882BE007B47CE /* Composition */,
+				9A020912281882BE007B47CE /* Models */,
+				9A02091D281882BF007B47CE /* Modules */,
+				9A02091A281882BE007B47CE /* Networking */,
+				9A020920281882BF007B47CE /* Utility */,
 				9A0208EB281881D0007B47CE /* Assets.xcassets */,
 				9A0208ED281881D0007B47CE /* LaunchScreen.storyboard */,
 				9A0208F0281881D0007B47CE /* Info.plist */,
@@ -113,18 +131,112 @@
 		9A0208F8281881D0007B47CE /* MiniBootcampTests */ = {
 			isa = PBXGroup;
 			children = (
-				9A0208F9281881D0007B47CE /* MiniBootcampTests.swift */,
+				9A020930281882D9007B47CE /* Composition Tests */,
+				9A020933281882D9007B47CE /* Model Tests */,
+				9A02092E281882D9007B47CE /* Module Tests */,
+				9A020936281882D9007B47CE /* Networking Tests */,
+				9A020939281882D9007B47CE /* Utility Tests */,
 			);
 			path = MiniBootcampTests;
 			sourceTree = "<group>";
 		};
-		9A020902281881D0007B47CE /* MiniBootcampUITests */ = {
+		9A020912281882BE007B47CE /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				9A020903281881D0007B47CE /* MiniBootcampUITests.swift */,
-				9A020905281881D0007B47CE /* MiniBootcampUITestsLaunchTests.swift */,
+				9A020913281882BE007B47CE /* Tweet.swift */,
+				9A020914281882BE007B47CE /* User.swift */,
 			);
-			path = MiniBootcampUITests;
+			path = Models;
+			sourceTree = "<group>";
+		};
+		9A020915281882BE007B47CE /* Composition */ = {
+			isa = PBXGroup;
+			children = (
+				9A020916281882BE007B47CE /* iOSViewControllerFactory.swift */,
+				9A020917281882BE007B47CE /* MainCoordinator.swift */,
+				9A020918281882BE007B47CE /* ViewControllerFactory.swift */,
+				9A020919281882BE007B47CE /* Coordinator.swift */,
+			);
+			path = Composition;
+			sourceTree = "<group>";
+		};
+		9A02091A281882BE007B47CE /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				9A02091B281882BE007B47CE /* TweetTimelineAPI.swift */,
+				9A02091C281882BE007B47CE /* Endpoint.swift */,
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
+		9A02091D281882BF007B47CE /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+				9A02091E281882BF007B47CE /* Feed */,
+			);
+			path = Modules;
+			sourceTree = "<group>";
+		};
+		9A02091E281882BF007B47CE /* Feed */ = {
+			isa = PBXGroup;
+			children = (
+				9A02091F281882BF007B47CE /* FeedViewController.swift */,
+			);
+			path = Feed;
+			sourceTree = "<group>";
+		};
+		9A020920281882BF007B47CE /* Utility */ = {
+			isa = PBXGroup;
+			children = (
+				9A020921281882BF007B47CE /* StaticFuncs.swift */,
+				9A020922281882BF007B47CE /* UIColorExtensions.swift */,
+			);
+			path = Utility;
+			sourceTree = "<group>";
+		};
+		9A02092E281882D9007B47CE /* Module Tests */ = {
+			isa = PBXGroup;
+			children = (
+				9A02092F281882D9007B47CE /* FeedViewControllerTests.swift */,
+			);
+			path = "Module Tests";
+			sourceTree = "<group>";
+		};
+		9A020930281882D9007B47CE /* Composition Tests */ = {
+			isa = PBXGroup;
+			children = (
+				9A020931281882D9007B47CE /* MainCoordinatorTests.swift */,
+				9A020932281882D9007B47CE /* iOSViewControllerFactoryTests.swift */,
+			);
+			path = "Composition Tests";
+			sourceTree = "<group>";
+		};
+		9A020933281882D9007B47CE /* Model Tests */ = {
+			isa = PBXGroup;
+			children = (
+				9A020934281882D9007B47CE /* TweetModelTests.swift */,
+				9A020935281882D9007B47CE /* UserModelTests.swift */,
+			);
+			path = "Model Tests";
+			sourceTree = "<group>";
+		};
+		9A020936281882D9007B47CE /* Networking Tests */ = {
+			isa = PBXGroup;
+			children = (
+				9A020937281882D9007B47CE /* EndpointTests.swift */,
+				9A020938281882D9007B47CE /* TweetTimelineAPITests.swift */,
+			);
+			path = "Networking Tests";
+			sourceTree = "<group>";
+		};
+		9A020939281882D9007B47CE /* Utility Tests */ = {
+			isa = PBXGroup;
+			children = (
+				9A02093A281882D9007B47CE /* tweetFake.json */,
+				9A02093B281882D9007B47CE /* userFake.json */,
+				9A02093C281882D9007B47CE /* StaticFuncsTests.swift */,
+			);
+			path = "Utility Tests";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -165,24 +277,6 @@
 			productReference = 9A0208F5281881D0007B47CE /* MiniBootcampTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		9A0208FE281881D0007B47CE /* MiniBootcampUITests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 9A02090F281881D0007B47CE /* Build configuration list for PBXNativeTarget "MiniBootcampUITests" */;
-			buildPhases = (
-				9A0208FB281881D0007B47CE /* Sources */,
-				9A0208FC281881D0007B47CE /* Frameworks */,
-				9A0208FD281881D0007B47CE /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				9A020901281881D0007B47CE /* PBXTargetDependency */,
-			);
-			name = MiniBootcampUITests;
-			productName = MiniBootcampUITests;
-			productReference = 9A0208FF281881D0007B47CE /* MiniBootcampUITests.xctest */;
-			productType = "com.apple.product-type.bundle.ui-testing";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -197,10 +291,6 @@
 						CreatedOnToolsVersion = 13.2.1;
 					};
 					9A0208F4281881D0007B47CE = {
-						CreatedOnToolsVersion = 13.2.1;
-						TestTargetID = 9A0208DE281881CF007B47CE;
-					};
-					9A0208FE281881D0007B47CE = {
 						CreatedOnToolsVersion = 13.2.1;
 						TestTargetID = 9A0208DE281881CF007B47CE;
 					};
@@ -221,7 +311,6 @@
 			targets = (
 				9A0208DE281881CF007B47CE /* MiniBootcamp */,
 				9A0208F4281881D0007B47CE /* MiniBootcampTests */,
-				9A0208FE281881D0007B47CE /* MiniBootcampUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -233,7 +322,6 @@
 			files = (
 				9A0208EF281881D0007B47CE /* LaunchScreen.storyboard in Resources */,
 				9A0208EC281881D0007B47CE /* Assets.xcassets in Resources */,
-				9A0208EA281881CF007B47CE /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -241,13 +329,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		9A0208FD281881D0007B47CE /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
+				9A020944281882D9007B47CE /* tweetFake.json in Resources */,
+				9A020945281882D9007B47CE /* userFake.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -258,9 +341,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9A0208E7281881CF007B47CE /* ViewController.swift in Sources */,
+				9A020928281882BF007B47CE /* Coordinator.swift in Sources */,
+				9A020924281882BF007B47CE /* User.swift in Sources */,
+				9A02092D281882BF007B47CE /* UIColorExtensions.swift in Sources */,
+				9A020927281882BF007B47CE /* ViewControllerFactory.swift in Sources */,
+				9A020926281882BF007B47CE /* MainCoordinator.swift in Sources */,
+				9A02092A281882BF007B47CE /* Endpoint.swift in Sources */,
+				9A020925281882BF007B47CE /* iOSViewControllerFactory.swift in Sources */,
+				9A020929281882BF007B47CE /* TweetTimelineAPI.swift in Sources */,
+				9A02092B281882BF007B47CE /* FeedViewController.swift in Sources */,
+				9A020923281882BF007B47CE /* Tweet.swift in Sources */,
 				9A0208E3281881CF007B47CE /* AppDelegate.swift in Sources */,
 				9A0208E5281881CF007B47CE /* SceneDelegate.swift in Sources */,
+				9A02092C281882BF007B47CE /* StaticFuncs.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -268,16 +361,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9A0208FA281881D0007B47CE /* MiniBootcampTests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		9A0208FB281881D0007B47CE /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				9A020906281881D0007B47CE /* MiniBootcampUITestsLaunchTests.swift in Sources */,
-				9A020904281881D0007B47CE /* MiniBootcampUITests.swift in Sources */,
+				9A02093F281882D9007B47CE /* iOSViewControllerFactoryTests.swift in Sources */,
+				9A020940281882D9007B47CE /* TweetModelTests.swift in Sources */,
+				9A02093D281882D9007B47CE /* FeedViewControllerTests.swift in Sources */,
+				9A020946281882D9007B47CE /* StaticFuncsTests.swift in Sources */,
+				9A020943281882D9007B47CE /* TweetTimelineAPITests.swift in Sources */,
+				9A020941281882D9007B47CE /* UserModelTests.swift in Sources */,
+				9A020942281882D9007B47CE /* EndpointTests.swift in Sources */,
+				9A02093E281882D9007B47CE /* MainCoordinatorTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -289,22 +380,9 @@
 			target = 9A0208DE281881CF007B47CE /* MiniBootcamp */;
 			targetProxy = 9A0208F6281881D0007B47CE /* PBXContainerItemProxy */;
 		};
-		9A020901281881D0007B47CE /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 9A0208DE281881CF007B47CE /* MiniBootcamp */;
-			targetProxy = 9A020900281881D0007B47CE /* PBXContainerItemProxy */;
-		};
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		9A0208E8281881CF007B47CE /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				9A0208E9281881CF007B47CE /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		9A0208ED281881D0007B47CE /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -443,7 +521,6 @@
 				INFOPLIST_FILE = MiniBootcamp/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -470,7 +547,6 @@
 				INFOPLIST_FILE = MiniBootcamp/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -524,40 +600,6 @@
 			};
 			name = Release;
 		};
-		9A020910281881D0007B47CE /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				GENERATE_INFOPLIST_FILE = YES;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = abner.MiniBootcampUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = MiniBootcamp;
-			};
-			name = Debug;
-		};
-		9A020911281881D0007B47CE /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				GENERATE_INFOPLIST_FILE = YES;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = abner.MiniBootcampUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = MiniBootcamp;
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -584,15 +626,6 @@
 			buildConfigurations = (
 				9A02090D281881D0007B47CE /* Debug */,
 				9A02090E281881D0007B47CE /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		9A02090F281881D0007B47CE /* Build configuration list for PBXNativeTarget "MiniBootcampUITests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				9A020910281881D0007B47CE /* Debug */,
-				9A020911281881D0007B47CE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
