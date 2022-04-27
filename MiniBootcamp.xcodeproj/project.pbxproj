@@ -130,7 +130,6 @@
 				9A020930281882D9007B47CE /* Composition Tests */,
 				9A020933281882D9007B47CE /* Model Tests */,
 				9A02092E281882D9007B47CE /* Module Tests */,
-				9A020936281882D9007B47CE /* Networking Tests */,
 				9A020939281882D9007B47CE /* Utility Tests */,
 			);
 			path = MiniBootcampTests;
@@ -214,13 +213,6 @@
 				9A020935281882D9007B47CE /* UserModelTests.swift */,
 			);
 			path = "Model Tests";
-			sourceTree = "<group>";
-		};
-		9A020936281882D9007B47CE /* Networking Tests */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = "Networking Tests";
 			sourceTree = "<group>";
 		};
 		9A020939281882D9007B47CE /* Utility Tests */ = {
