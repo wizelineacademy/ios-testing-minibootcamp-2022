@@ -30,6 +30,7 @@
 		9A020944281882D9007B47CE /* tweetFake.json in Resources */ = {isa = PBXBuildFile; fileRef = 9A02093A281882D9007B47CE /* tweetFake.json */; };
 		9A020945281882D9007B47CE /* userFake.json in Resources */ = {isa = PBXBuildFile; fileRef = 9A02093B281882D9007B47CE /* userFake.json */; };
 		9A020946281882D9007B47CE /* StaticFuncsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A02093C281882D9007B47CE /* StaticFuncsTests.swift */; };
+		9AD21A7B281AF3BE00A33F05 /* UIViewExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AD21A7A281AF3BE00A33F05 /* UIViewExtensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -69,6 +70,7 @@
 		9A02093A281882D9007B47CE /* tweetFake.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = tweetFake.json; sourceTree = "<group>"; };
 		9A02093B281882D9007B47CE /* userFake.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = userFake.json; sourceTree = "<group>"; };
 		9A02093C281882D9007B47CE /* StaticFuncsTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StaticFuncsTests.swift; sourceTree = "<group>"; };
+		9AD21A7A281AF3BE00A33F05 /* UIViewExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewExtensions.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -116,6 +118,7 @@
 				9A020912281882BE007B47CE /* Models */,
 				9A02091D281882BF007B47CE /* Modules */,
 				9A02091A281882BE007B47CE /* Networking */,
+				9AD21A79281AF39100A33F05 /* Extensions */,
 				9A020920281882BF007B47CE /* Utility */,
 				9A0208EB281881D0007B47CE /* Assets.xcassets */,
 				9A0208ED281881D0007B47CE /* LaunchScreen.storyboard */,
@@ -184,7 +187,6 @@
 			isa = PBXGroup;
 			children = (
 				9A020921281882BF007B47CE /* StaticFuncs.swift */,
-				9A020922281882BF007B47CE /* UIColorExtensions.swift */,
 			);
 			path = Utility;
 			sourceTree = "<group>";
@@ -223,6 +225,15 @@
 				9A02093C281882D9007B47CE /* StaticFuncsTests.swift */,
 			);
 			path = "Utility Tests";
+			sourceTree = "<group>";
+		};
+		9AD21A79281AF39100A33F05 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				9A020922281882BF007B47CE /* UIColorExtensions.swift */,
+				9AD21A7A281AF3BE00A33F05 /* UIViewExtensions.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -335,6 +346,7 @@
 				9A02092A281882BF007B47CE /* Endpoint.swift in Sources */,
 				9A020925281882BF007B47CE /* iOSViewControllerFactory.swift in Sources */,
 				9A020929281882BF007B47CE /* TweetTimelineAPI.swift in Sources */,
+				9AD21A7B281AF3BE00A33F05 /* UIViewExtensions.swift in Sources */,
 				9A02092B281882BF007B47CE /* FeedViewController.swift in Sources */,
 				9A020923281882BF007B47CE /* Tweet.swift in Sources */,
 				9A0208E3281881CF007B47CE /* AppDelegate.swift in Sources */,
