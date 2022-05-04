@@ -31,6 +31,8 @@
 		9A020945281882D9007B47CE /* userFake.json in Resources */ = {isa = PBXBuildFile; fileRef = 9A02093B281882D9007B47CE /* userFake.json */; };
 		9A020946281882D9007B47CE /* StaticFuncsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A02093C281882D9007B47CE /* StaticFuncsTests.swift */; };
 		9A64D3462822E34400D54132 /* UIFontExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A64D3452822E34400D54132 /* UIFontExtensions.swift */; };
+		9AAF3B692822F7D900A679CA /* ObserverTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AAF3B682822F7D900A679CA /* ObserverTests.swift */; };
+		9AAF3B6B2822F7F300A679CA /* Observer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AAF3B6A2822F7F300A679CA /* Observer.swift */; };
 		9AD21A7B281AF3BE00A33F05 /* UIViewExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AD21A7A281AF3BE00A33F05 /* UIViewExtensions.swift */; };
 /* End PBXBuildFile section */
 
@@ -72,6 +74,8 @@
 		9A02093B281882D9007B47CE /* userFake.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = userFake.json; sourceTree = "<group>"; };
 		9A02093C281882D9007B47CE /* StaticFuncsTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StaticFuncsTests.swift; sourceTree = "<group>"; };
 		9A64D3452822E34400D54132 /* UIFontExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIFontExtensions.swift; sourceTree = "<group>"; };
+		9AAF3B682822F7D900A679CA /* ObserverTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObserverTests.swift; sourceTree = "<group>"; };
+		9AAF3B6A2822F7F300A679CA /* Observer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Observer.swift; sourceTree = "<group>"; };
 		9AD21A7A281AF3BE00A33F05 /* UIViewExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewExtensions.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -189,6 +193,7 @@
 			isa = PBXGroup;
 			children = (
 				9A020921281882BF007B47CE /* StaticFuncs.swift */,
+				9AAF3B6A2822F7F300A679CA /* Observer.swift */,
 			);
 			path = Utility;
 			sourceTree = "<group>";
@@ -225,6 +230,7 @@
 				9A02093A281882D9007B47CE /* tweetFake.json */,
 				9A02093B281882D9007B47CE /* userFake.json */,
 				9A02093C281882D9007B47CE /* StaticFuncsTests.swift */,
+				9AAF3B682822F7D900A679CA /* ObserverTests.swift */,
 			);
 			path = "Utility Tests";
 			sourceTree = "<group>";
@@ -342,6 +348,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9A020928281882BF007B47CE /* Coordinator.swift in Sources */,
+				9AAF3B6B2822F7F300A679CA /* Observer.swift in Sources */,
 				9A020924281882BF007B47CE /* User.swift in Sources */,
 				9A64D3462822E34400D54132 /* UIFontExtensions.swift in Sources */,
 				9A02092D281882BF007B47CE /* UIColorExtensions.swift in Sources */,
@@ -364,6 +371,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9A02093F281882D9007B47CE /* iOSViewControllerFactoryTests.swift in Sources */,
+				9AAF3B692822F7D900A679CA /* ObserverTests.swift in Sources */,
 				9A020940281882D9007B47CE /* TweetModelTests.swift in Sources */,
 				9A02093D281882D9007B47CE /* FeedViewControllerTests.swift in Sources */,
 				9A020946281882D9007B47CE /* StaticFuncsTests.swift in Sources */,
