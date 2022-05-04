@@ -30,6 +30,7 @@
 		9A020944281882D9007B47CE /* tweetFake.json in Resources */ = {isa = PBXBuildFile; fileRef = 9A02093A281882D9007B47CE /* tweetFake.json */; };
 		9A020945281882D9007B47CE /* userFake.json in Resources */ = {isa = PBXBuildFile; fileRef = 9A02093B281882D9007B47CE /* userFake.json */; };
 		9A020946281882D9007B47CE /* StaticFuncsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A02093C281882D9007B47CE /* StaticFuncsTests.swift */; };
+		9A64D3462822E34400D54132 /* UIFontExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A64D3452822E34400D54132 /* UIFontExtensions.swift */; };
 		9AD21A7B281AF3BE00A33F05 /* UIViewExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AD21A7A281AF3BE00A33F05 /* UIViewExtensions.swift */; };
 /* End PBXBuildFile section */
 
@@ -70,6 +71,7 @@
 		9A02093A281882D9007B47CE /* tweetFake.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = tweetFake.json; sourceTree = "<group>"; };
 		9A02093B281882D9007B47CE /* userFake.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = userFake.json; sourceTree = "<group>"; };
 		9A02093C281882D9007B47CE /* StaticFuncsTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StaticFuncsTests.swift; sourceTree = "<group>"; };
+		9A64D3452822E34400D54132 /* UIFontExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIFontExtensions.swift; sourceTree = "<group>"; };
 		9AD21A7A281AF3BE00A33F05 /* UIViewExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewExtensions.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -232,6 +234,7 @@
 			children = (
 				9A020922281882BF007B47CE /* UIColorExtensions.swift */,
 				9AD21A7A281AF3BE00A33F05 /* UIViewExtensions.swift */,
+				9A64D3452822E34400D54132 /* UIFontExtensions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -340,6 +343,7 @@
 			files = (
 				9A020928281882BF007B47CE /* Coordinator.swift in Sources */,
 				9A020924281882BF007B47CE /* User.swift in Sources */,
+				9A64D3462822E34400D54132 /* UIFontExtensions.swift in Sources */,
 				9A02092D281882BF007B47CE /* UIColorExtensions.swift in Sources */,
 				9A020927281882BF007B47CE /* ViewControllerFactory.swift in Sources */,
 				9A020926281882BF007B47CE /* MainCoordinator.swift in Sources */,
