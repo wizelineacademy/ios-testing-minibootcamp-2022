@@ -35,10 +35,16 @@ The project is a twitter-like app that will be displaying tweets in a timeline.
 ![Simulator Screen Shot - iPhone 12 mini - 2022-04-28 at 13 58 03](https://user-images.githubusercontent.com/103285773/165826622-f1a78e4a-172c-4131-9c3c-4804a3c78134.png)
 
 ## The challenge
-Your challenge is about implementing the **Search Trending tweets** 🔥 or **Compose New tweet** or **Displaying User profile** applying what you learn in through this mini bootcamp
+Your challenge is about implementing the **Search Trending tweets** 🔥 or **Compose New tweet** or **Displaying User profile** or **Displaying tweet detail** applying what you learn in through this mini bootcamp
 and also applying your knowledge for acheive it. It's up to you. 🖖🏼
 
 Happy coding! 📲🍺
+
+## Rubric
+Get >= 95% code coverage in the time set!! 🔥
+Everything is up to you. You can apply the patterns you want, the UI design you want; let your creativity be free 🌈
+
+Just please avoid using third party libraries. You can use it for doing some animations like _Lottie_ :)
 
 # Technical stuff
 
