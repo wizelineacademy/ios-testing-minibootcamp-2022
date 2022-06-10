@@ -1,0 +1,7 @@
+#XCode
+
+#User data
+xcuserdata/
+
+#DS
+.DS_Store
