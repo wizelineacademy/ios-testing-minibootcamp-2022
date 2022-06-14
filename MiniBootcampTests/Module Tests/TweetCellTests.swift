@@ -75,15 +75,65 @@ class TweetCellTests: XCTestCase {
         XCTAssertEqual(sut.contentLabel.textColor, textColor)
     }
     
-    func testAllSubviewsAreAddedAsSubviews() {
-        XCTAssertEqual(sut.subviews.count, 4)
-    }
+  func testAllSubviewsAreAddedAsSubviews() {
+    XCTAssertEqual(sut.subviews.count, 5)
+  }
+
+  func testCommentButton_initialConfiguration() {
+    // Given
+    let buttonImage = UIImage(.comment)
+    let buttonColor = UIColor.redMain
+
+    // When
+
+    // Then
+    XCTAssertEqual(sut.commentButton.image(for: .normal), buttonImage)
+    XCTAssertEqual(sut.commentButton.tintColor, buttonColor)
+  }
+
+  func testRetweetButton_initialConfiguration() {
+    // Given
+    let buttonImage = UIImage(.ret)
+    let buttonColor = UIColor.redMain
+
+    // When
+
+    // Then
+    XCTAssertEqual(sut.retweetButton.image(for: .normal), buttonImage)
+    XCTAssertEqual(sut.retweetButton.tintColor, buttonColor)
+  }
+
+  func testFavouriteButton_initialConfiguration() {
+    // Given
+    let buttonImage = UIImage(.fav)
+    let buttonColor = UIColor.redMain
+
+    // When
+
+    // Then
+    XCTAssertEqual(sut.favoriteButton.image(for: .normal), buttonImage)
+    XCTAssertEqual(sut.favoriteButton.tintColor, buttonColor)
+  }
+
+  func testShareButton_initialConfiguration() {
+    // Given
+    let buttonImage = UIImage(.share)
+    let buttonColor = UIColor.redMain
+
+    // When
+
+    // Then
+    XCTAssertEqual(sut.shareButton.image(for: .normal), buttonImage)
+    XCTAssertEqual(sut.shareButton.tintColor, buttonColor)
+  }
+
+  func testStackViewHasAddedSubviews() {
+    let stackView = sut.subviews.filter { $0.tag == 4 }
+    print("-->", stackView.first is UIStackView)
+  }
     
-    
-    override func tearDown() {
+  override func tearDown() {
         super.tearDown()
         sut = nil
-    }
-    
-    
+  } 
 }
