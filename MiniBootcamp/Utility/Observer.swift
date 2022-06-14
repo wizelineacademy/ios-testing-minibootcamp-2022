@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import UIKit
 
 protocol Observable {
     associatedtype Binder
@@ -46,5 +47,25 @@ struct Observer<T>: Observable {
         mutating func bind(_ listener: @escaping (Binder?) -> ()) {
             self.listener = listener
         }
+    
+}
+
+class MyViewController: UIViewController {
+    
+    var boolean: Observer<Bool> = Observer(false)
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        
+        boolean.bind { value in
+            print("\(value)")
+        }
+    }
+    
+    func changeState() {
+        boolean.onNext(true)
+        boolean.value = true
+    }
     
 }
