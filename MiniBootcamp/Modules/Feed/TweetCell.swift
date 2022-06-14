@@ -2,7 +2,7 @@
 //  TweetCell.swift
 //  MiniBootcamp
 //
-//  Created by Abner Castro on 14/06/22.
+//  Created by Heber Raziel Alvarez Ruedas on 14/06/22.
 //
 
 import UIKit

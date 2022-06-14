@@ -10,11 +10,11 @@ import XCTest
 
 class FeedViewControllerTests: XCTestCase {
     
-    func test_vc_backgroundIsSystemBackground() {
-        let sut = FeedViewController()
-        
-        XCTAssertNotNil(sut.view?.backgroundColor)
-        XCTAssertEqual(sut.view?.backgroundColor, .systemBackground)
-    }
+//    func test_vc_backgroundIsSystemBackground() {
+//        let sut = FeedViewController()
+//        
+//        XCTAssertNotNil(sut.view?.backgroundColor)
+//        XCTAssertEqual(sut.view?.backgroundColor, .systemBackground)
+//    }
 
 }
