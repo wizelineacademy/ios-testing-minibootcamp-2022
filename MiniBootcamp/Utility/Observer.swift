@@ -59,7 +59,7 @@ class MyViewController: UIViewController {
         
         
         boolean.bind { value in
-            print("\(value)")
+          print("\(String(describing: value))")
         }
     }
     

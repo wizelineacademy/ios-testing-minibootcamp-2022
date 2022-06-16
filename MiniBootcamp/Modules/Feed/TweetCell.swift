@@ -8,45 +8,46 @@
 import UIKit
 
 class TweetCell: UITableViewCell {
-  let userImageView: UIImageView = create {
+  @UsesLayout var userImageView: UIImageView = create {
     $0.layer.cornerRadius = 25
     $0.clipsToBounds = true
-    $0.image = UIImage(.gato)
+    $0.image = UIImage(.gato).withRenderingMode(.alwaysTemplate)
+    $0.tintColor = .redMain
   }
 
-  let nameLabel: UILabel = create {
+  @UsesLayout var nameLabel: UILabel = create {
     $0.font = UIFont.bold(withSize: .name)
     $0.adjustsFontSizeToFitWidth = true
   }
 
-  let userNameLabel: UILabel = create {
+  @UsesLayout var userNameLabel: UILabel = create {
     $0.font = UIFont.bold(withSize: .username)
     $0.textColor = UIColor.systemGray
   }
 
-  let contentLabel: UILabel = create {
-    $0.font = UIFont.bold(withSize: .content)
+  @UsesLayout var contentLabel: UILabel = create {
+    $0.font = UIFont.normal(withSize: .content)
     $0.textColor = UIColor.label
     $0.numberOfLines = 0
   }
 
-  let commentButton: UIButton = create {
-    $0.setImage(UIImage(.comment), for: .normal)
+  @UsesLayout var commentButton: UIButton = create {
+    $0.setImage(UIImage(.comment).withRenderingMode(.alwaysTemplate), for: .normal)
     $0.tintColor = .redMain
   }
 
-  let retweetButton: UIButton = create {
-    $0.setImage(UIImage(.ret), for: .normal)
+  @UsesLayout var retweetButton: UIButton = create {
+    $0.setImage(UIImage(.ret).withRenderingMode(.alwaysTemplate), for: .normal)
     $0.tintColor = .redMain
   }
 
-  let favoriteButton: UIButton = create {
-    $0.setImage(UIImage(.fav), for: .normal)
+  @UsesLayout var favoriteButton: UIButton = create {
+    $0.setImage(UIImage(.fav).withRenderingMode(.alwaysTemplate), for: .normal)
     $0.tintColor = .redMain
   }
 
-  let shareButton: UIButton = create {
-    $0.setImage(UIImage(.share), for: .normal)
+  @UsesLayout var shareButton: UIButton = create {
+    $0.setImage(UIImage(.share).withRenderingMode(.alwaysTemplate), for: .normal)
     $0.tintColor = .redMain
   }
 
@@ -54,26 +55,98 @@ class TweetCell: UITableViewCell {
 
   override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
     super.init(style: style, reuseIdentifier: reuseIdentifier)
-    setTags()
-    backgroundColor = .systemBackground
-    addSubview(nameLabel)
-    addSubview(userNameLabel)
-    addSubview(userImageView)
-    addSubview(contentLabel)
-    addSubview(stackView)
-
-    stackView.addArrangedSubview(commentButton)
-    stackView.addArrangedSubview(retweetButton)
-    stackView.addArrangedSubview(favoriteButton)
-    stackView.addArrangedSubview(shareButton)
-  }
-
-  func setTags() {
-    stackView.tag = 4
+    setupView()
   }
 
   required init?(coder: NSCoder) {
     fatalError("init(coder:) has not been implemented")
   }
 
+  private func setTags() {
+    stackView.tag = 4
+  }
+
+  // MARK: - Private methods
+  private func setupView() {
+    backgroundColor = .systemBackground
+    addSubviews()
+    userImageViewConstraints()
+    nameLabelConstraints()
+    userNameLabelConstraints()
+    contentLabelConstraints()
+    stackViewConstraints()
+  }
+
+  private func addSubviews() {
+    addSubview(userImageView)
+    addSubview(nameLabel)
+    addSubview(userNameLabel)
+    addSubview(contentLabel)
+    addSubview(stackView)
+
+    setTags()
+    stackView.addArrangedSubview(commentButton)
+    stackView.addArrangedSubview(retweetButton)
+    stackView.addArrangedSubview(favoriteButton)
+    stackView.addArrangedSubview(shareButton)
+  }
+
+  private func userImageViewConstraints() {
+    NSLayoutConstraint.activate([
+      userImageView.centerYAnchor.constraint(equalTo: contentView.centerYAnchor),
+      userImageView.leftAnchor.constraint(equalTo: contentView.leftAnchor, constant: 16),
+      userImageView.heightAnchor.constraint(equalToConstant: 48),
+      userImageView.widthAnchor.constraint(equalToConstant: 48)
+    ])
+  }
+
+  private func nameLabelConstraints() {
+    nameLabel.text = "WizeBot"
+    nameLabel.textColor = .black
+    nameLabel.setContentHuggingPriority(UILayoutPriority(999), for: .vertical)
+    NSLayoutConstraint.activate([
+      nameLabel.topAnchor.constraint(equalTo: topAnchor, constant: 8),
+      nameLabel.leftAnchor.constraint(equalTo: userImageView.rightAnchor, constant: 8),
+      nameLabel.rightAnchor.constraint(equalTo: rightAnchor, constant: -8)
+    ])
+  }
+
+  private func userNameLabelConstraints() {
+    userNameLabel.text = "@wizeservicebot"
+    userNameLabel.setContentHuggingPriority(UILayoutPriority(999), for: .vertical)
+    NSLayoutConstraint.activate([
+      userNameLabel.topAnchor.constraint(equalTo: nameLabel.bottomAnchor, constant: 8),
+      userNameLabel.leftAnchor.constraint(equalTo: userImageView.rightAnchor, constant: 8),
+      userNameLabel.rightAnchor.constraint(equalTo: rightAnchor, constant: -8)
+    ])
+  }
+
+  private func contentLabelConstraints() {
+    contentLabel.textColor = UIColor.black
+    contentLabel.text = """
+Content, this should increase in size, of course it increases, but
+and- Content, this should increase in size, of course it increases, but
+and. Content, this should increase in size, of course it increases, but
+and. Content, this should increase in size, of course it increases, but
+and
+"""
+    NSLayoutConstraint.activate([
+      contentLabel.topAnchor.constraint(equalTo: userNameLabel.bottomAnchor, constant: 8),
+      contentLabel.leftAnchor.constraint(equalTo: userImageView.rightAnchor, constant: 8),
+      contentLabel.rightAnchor.constraint(equalTo: rightAnchor, constant: -8)
+    ])
+  }
+
+  private func stackViewConstraints() {
+    stackView.translatesAutoresizingMaskIntoConstraints = false
+    stackView.axis = .horizontal
+    stackView.distribution = .equalSpacing
+    stackView.alignment = .leading
+    NSLayoutConstraint.activate([
+      stackView.topAnchor.constraint(equalTo: contentLabel.bottomAnchor, constant: 8),
+      stackView.leftAnchor.constraint(equalTo: userImageView.rightAnchor),
+      stackView.bottomAnchor.constraint(equalTo: bottomAnchor, constant: -8),
+      stackView.rightAnchor.constraint(equalTo: rightAnchor, constant: -8)
+    ])
+  }
 }

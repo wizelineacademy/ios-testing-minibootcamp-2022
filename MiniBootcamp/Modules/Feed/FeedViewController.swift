@@ -11,9 +11,9 @@ class FeedViewController: UIViewController {
 
   override func viewDidLoad() {
     super.viewDidLoad()
-    view.backgroundColor = .blue
-
+    view.backgroundColor = .white
     setNavigationBar()
+    addTweetCell()
   }
 
   private func setNavigationBar() {
@@ -37,5 +37,16 @@ class FeedViewController: UIViewController {
 
   @objc private func addTapped() {
     print("")
+  }
+
+  private func addTweetCell() {
+    @UsesLayout var cell: TweetCell = TweetCell()
+    cell.backgroundColor = .white
+    view.addSubview(cell)
+    NSLayoutConstraint.activate([
+      cell.centerXAnchor.constraint(equalTo: view.centerXAnchor),
+      cell.centerYAnchor.constraint(equalTo: view.centerYAnchor),
+      cell.widthAnchor.constraint(equalTo: view.widthAnchor)
+    ])
   }
 }
