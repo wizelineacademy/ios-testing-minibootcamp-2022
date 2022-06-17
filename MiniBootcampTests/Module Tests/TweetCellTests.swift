@@ -44,7 +44,7 @@ class TweetCellTests: XCTestCase {
   func testNameLabel_initialConfiguration() {
     // Given
     let font = UIFont.bold(withSize: .name)
-    let textColor = UIColor.label
+    let textColor = UIColor.black
 
     //Then
     XCTAssertEqual(sut.nameLabel.font, font)
@@ -121,7 +121,7 @@ class TweetCellTests: XCTestCase {
 
   func testStackViewHasAddedSubviews() throws {
     // Given
-    let stackView = try XCTUnwrap(sut.subviews.filter { $0.tag == 4 }.first)
+    let stackView = try XCTUnwrap(sut.subviews.first { $0.tag == 4 })
     
     // Then
     XCTAssertTrue(stackView.subviews.count == 4)

@@ -93,7 +93,7 @@ class TweetCell: UITableViewCell {
 
   private func userImageViewConstraints() {
     NSLayoutConstraint.activate([
-      userImageView.centerYAnchor.constraint(equalTo: contentView.centerYAnchor),
+      userImageView.centerYAnchor.constraint(equalTo: userNameLabel.centerYAnchor),
       userImageView.leftAnchor.constraint(equalTo: contentView.leftAnchor, constant: 16),
       userImageView.heightAnchor.constraint(equalToConstant: 48),
       userImageView.widthAnchor.constraint(equalToConstant: 48)
@@ -125,10 +125,12 @@ class TweetCell: UITableViewCell {
     contentLabel.textColor = UIColor.black
     contentLabel.text = """
 Content, this should increase in size, of course it increases, but
-and- Content, this should increase in size, of course it increases, but
-and. Content, this should increase in size, of course it increases, but
-and. Content, this should increase in size, of course it increases, but
-and
+and-group.enter()group.enter()group.enter()group.enter()
+group.enter()group.enter()group.enter()group.enter()group.enter()
+group.enter()group.enter()
+group.enter()group.enter()group.enter()
+group.enter()group.enter()group.enter()group.enter()
+group.enter()group.enter()group.enter()
 """
     NSLayoutConstraint.activate([
       contentLabel.topAnchor.constraint(equalTo: userNameLabel.bottomAnchor, constant: 8),
