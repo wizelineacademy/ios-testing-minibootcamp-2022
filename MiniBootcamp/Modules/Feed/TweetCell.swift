@@ -19,16 +19,19 @@ class TweetCell: UITableViewCell {
     }
     
     let nameLabel: UILabel = create {
+        $0.text = "Holaaaa"
         $0.font = UIFont.bold(withSize: .name)
         $0.adjustsFontSizeToFitWidth = true
     }
     
     let usernameLabel: UILabel = create {
+        $0.text = "@hellowizeline_"
         $0.font = UIFont.bold(withSize: .username)
         $0.textColor = UIColor.systemGray
     }
     
     let contentLabel: UILabel = create {
+        $0.text = "This is a test on showing about how a tweet content can be displayed on the TweetCell ✌🏼😎"
         $0.font = UIFont.normal(withSize: .content)
         $0.textColor = UIColor.label
         $0.numberOfLines = 0
@@ -42,8 +45,15 @@ class TweetCell: UITableViewCell {
         addSubview(usernameLabel)
         addSubview(userImageView)
         addSubview(contentLabel)
+        addConstraints()
     }
     
+    private func addConstraints() {
+        userImageView.anchor(top: topAnchor, leading: leadingAnchor, trailing: nil, bottom: nil, padding: .init(top: 12, left: 12, bottom: 0, right: 0), size: .init(width: 50, height: 50))
+        nameLabel.anchor(top: userImageView.topAnchor, leading: userImageView.trailingAnchor, trailing: trailingAnchor, bottom: nil, padding: .init(top: 0, left: 4, bottom: 0, right: 12), size: .init(width: 0, height: 20))
+        usernameLabel.anchor(top: nameLabel.bottomAnchor, leading: nameLabel.leadingAnchor, trailing: nameLabel.trailingAnchor, bottom: nil, padding: .init(top: 0, left: 0, bottom: 0, right: 0), size: .init(width: 0, height: 20))
+        contentLabel.anchor(top: usernameLabel.bottomAnchor, leading: usernameLabel.leadingAnchor, trailing: usernameLabel.trailingAnchor, bottom: bottomAnchor, padding: .init(top: 16, left: 0, bottom: 16, right: 0))
+    }
     
     
 }
