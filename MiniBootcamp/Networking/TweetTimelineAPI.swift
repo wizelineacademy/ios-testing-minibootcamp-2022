@@ -15,10 +15,12 @@ enum TweetAPIError: Error {
 
 struct TweetTimelineAPI {
     
+    let session: URLSession
+    
     func load(_ endpoint: Endpoint, completion: @escaping (Result<[Tweet], Error>) -> ()) {
         
         let request = endpoint.request
-        URLSession.shared.dataTask(with: request) { data, response, error in
+        session.dataTask(with: request) { data, response, error in
             
             if let error = error {
                 completion(.failure(error))

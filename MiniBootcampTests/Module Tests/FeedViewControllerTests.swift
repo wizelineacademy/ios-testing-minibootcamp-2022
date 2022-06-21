@@ -36,7 +36,7 @@ class FeedViewControllerTests: XCTestCase {
     
     func testTableViewNumberOfRowsIsOne() {
         
-        XCTAssertEqual(sut.tableView.dataSource?.tableView(sut.tableView, numberOfRowsInSection: 0), 1)
+        XCTAssertEqual(sut.tableView.dataSource?.tableView(sut.tableView, numberOfRowsInSection: 0), 5)
         
     }
     
