@@ -68,7 +68,7 @@ class TweetCell: UITableViewCell {
 
   // MARK: - Private methods
   private func setupView() {
-    backgroundColor = .systemBackground
+    backgroundColor = .white
     addSubviews()
     userImageViewConstraints()
     nameLabelConstraints()
@@ -92,51 +92,37 @@ class TweetCell: UITableViewCell {
   }
 
   private func userImageViewConstraints() {
-    NSLayoutConstraint.activate([
-      userImageView.centerYAnchor.constraint(equalTo: userNameLabel.centerYAnchor),
-      userImageView.leftAnchor.constraint(equalTo: contentView.leftAnchor, constant: 16),
-      userImageView.heightAnchor.constraint(equalToConstant: 48),
-      userImageView.widthAnchor.constraint(equalToConstant: 48)
-    ])
+    userImageView.anchor(top: nil, leading: leadingAnchor, trailing: nil, bottom: nil,
+                         padding: UIEdgeInsets(top: 0, left: 16, bottom: 0, right: 0))
+    userImageView.centerYAnchor.constraint(equalTo: userNameLabel.centerYAnchor).isActive = true
+    userImageView.heightAnchor.constraint(equalToConstant: 48).isActive = true
+    userImageView.widthAnchor.constraint(equalToConstant: 48).isActive = true
   }
 
   private func nameLabelConstraints() {
     nameLabel.text = "WizeBot"
     nameLabel.textColor = .black
     nameLabel.setContentHuggingPriority(UILayoutPriority(999), for: .vertical)
-    NSLayoutConstraint.activate([
-      nameLabel.topAnchor.constraint(equalTo: topAnchor, constant: 8),
-      nameLabel.leftAnchor.constraint(equalTo: userImageView.rightAnchor, constant: 8),
-      nameLabel.rightAnchor.constraint(equalTo: rightAnchor, constant: -8)
-    ])
+    nameLabel.anchor(top: topAnchor, leading: userImageView.trailingAnchor, trailing: trailingAnchor, bottom: nil,
+                     padding: UIEdgeInsets(top: 8, left: 8, bottom: 0, right: 8))
   }
 
   private func userNameLabelConstraints() {
     userNameLabel.text = "@wizeservicebot"
     userNameLabel.setContentHuggingPriority(UILayoutPriority(999), for: .vertical)
-    NSLayoutConstraint.activate([
-      userNameLabel.topAnchor.constraint(equalTo: nameLabel.bottomAnchor, constant: 8),
-      userNameLabel.leftAnchor.constraint(equalTo: userImageView.rightAnchor, constant: 8),
-      userNameLabel.rightAnchor.constraint(equalTo: rightAnchor, constant: -8)
-    ])
+    userNameLabel.anchor(top: nameLabel.bottomAnchor, leading: userImageView.trailingAnchor, trailing: trailingAnchor, bottom: nil,
+                         padding: UIEdgeInsets(top: 8, left: 8, bottom: 0, right: 8))
+
   }
 
   private func contentLabelConstraints() {
     contentLabel.textColor = UIColor.black
     contentLabel.text = """
-Content, this should increase in size, of course it increases, but
-and-group.enter()group.enter()group.enter()group.enter()
-group.enter()group.enter()group.enter()group.enter()group.enter()
-group.enter()group.enter()
-group.enter()group.enter()group.enter()
-group.enter()group.enter()group.enter()group.enter()
-group.enter()group.enter()group.enter()
+Content, this should increase in size, of course it increases,
+Content, this should increase in size, of course it increases
 """
-    NSLayoutConstraint.activate([
-      contentLabel.topAnchor.constraint(equalTo: userNameLabel.bottomAnchor, constant: 8),
-      contentLabel.leftAnchor.constraint(equalTo: userImageView.rightAnchor, constant: 8),
-      contentLabel.rightAnchor.constraint(equalTo: rightAnchor, constant: -8)
-    ])
+    contentLabel.anchor(top: userNameLabel.bottomAnchor, leading: userImageView.trailingAnchor, trailing: trailingAnchor, bottom: nil,
+                        padding: UIEdgeInsets(top: 8, left: 8, bottom: 0, right: 8))
   }
 
   private func stackViewConstraints() {
@@ -144,11 +130,7 @@ group.enter()group.enter()group.enter()
     stackView.axis = .horizontal
     stackView.distribution = .equalSpacing
     stackView.alignment = .leading
-    NSLayoutConstraint.activate([
-      stackView.topAnchor.constraint(equalTo: contentLabel.bottomAnchor, constant: 8),
-      stackView.leftAnchor.constraint(equalTo: userImageView.rightAnchor),
-      stackView.bottomAnchor.constraint(equalTo: bottomAnchor, constant: -8),
-      stackView.rightAnchor.constraint(equalTo: rightAnchor, constant: -8)
-    ])
+    stackView.anchor(top: contentLabel.bottomAnchor, leading: userImageView.trailingAnchor, trailing: trailingAnchor, bottom: bottomAnchor,
+                     padding: UIEdgeInsets(top: 8, left: 8, bottom: 8, right: 16))
   }
 }

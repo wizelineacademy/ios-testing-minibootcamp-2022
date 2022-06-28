@@ -28,8 +28,8 @@ class TweetCellTests: XCTestCase {
   }
 
   func testBackgroundIsSystem() {
-    let systemBackground = UIColor.systemBackground
-    XCTAssertEqual(sut.backgroundColor, systemBackground)
+    let whiteBackground = UIColor.white
+    XCTAssertEqual(sut.backgroundColor, whiteBackground)
   }
 
   func testuserImageView_initialConfiguration() {
@@ -76,7 +76,7 @@ class TweetCellTests: XCTestCase {
   }
 
   func testAllSubviewsAreAddedAsSubviews() {
-    XCTAssertEqual(sut.subviews.count, 6)
+    XCTAssertEqual(sut.subviews.count, 5)
   }
 
   func testCommentButton_initialConfiguration() {
