@@ -2,21 +2,28 @@
 //  TweetMock.swift
 //  MiniBootcampTests
 //
-//  Created by Abner Castro on 21/06/22.
+//  Created by Abner Castro on 28/06/22.
 //
 
 import Foundation
 @testable import MiniBootcamp
 
-class TweetMock {
+class TweetStub {
     
-    func tweetData() throws -> Data {
-        
+    func tweetStub() throws -> Tweet {
         guard let path = Bundle(for: type(of: self)).path(forResource: "tweetFake", ofType: "json") else { fatalError("Couldn't find tweetFake.json file") }
         
         let data = try Data(contentsOf: URL(fileURLWithPath: path))
-        return data
-        
+        print(try JSONSerialization.jsonObject(with: data, options: .fragmentsAllowed))
+        return try JSONDecoder().decode(Tweet.self, from: data)
+    }
+    
+    func tweets(number: Int) throws -> [Tweet] {
+        var timeline = [Tweet]()
+        for _ in 1...number {
+            timeline.append(try tweetStub())
+        }
+        return timeline
     }
     
 }

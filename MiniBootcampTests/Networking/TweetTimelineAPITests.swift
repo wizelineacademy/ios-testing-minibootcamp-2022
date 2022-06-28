@@ -101,33 +101,7 @@ class TweetTimelineAPITests: XCTestCase {
         let unwrappedError = try XCTUnwrap(expectedError)
         XCTAssertEqual(unwrappedError, .parsingData)
     }
-    
-    
-    func testResponseWithParsing() throws {
-        // given
-        let expectation = expectation(description: "tweettimeline expectation")
-        var timeline = [Tweet]()
-        session.data = try TweetMock().tweetData()
-        
-        
-        // when
-        sut.load(.timeline) { result in
-            switch result {
-            case .success(let tweets):
-                timeline = tweets
-                expectation.fulfill()
-            default:
-                break
-            }
-        }
-        
-        // then
-        wait(for: [expectation], timeout: 3.0)
-        XCTAssertNotEqual(timeline.count, 0)
-    }
-    
-    
-    
+
     private class FakeSession: URLSession {
         
         var data: Data?
