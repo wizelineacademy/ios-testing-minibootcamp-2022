@@ -19,6 +19,7 @@ class MainCoordinator: Coordinator {
     }
     
     func start() {
+        
         rootViewController.pushViewController(viewControllerFactory.feedViewController(), animated: false)
     }
     

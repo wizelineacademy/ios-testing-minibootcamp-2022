@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import UIKit
 
 enum TweetAPIError: Error {
     case noData
@@ -20,15 +21,17 @@ struct TweetTimelineAPI {
         let request = endpoint.request
         URLSession.shared.dataTask(with: request) { data, response, error in
             
+            guard let data = data else {
+                completion(.failure(TweetAPIError.noData))
+                return
+            }
+            
             if let error = error {
                 completion(.failure(error))
                 return
             }
             
-            guard let data = data else {
-                completion(.failure(TweetAPIError.noData))
-                return
-            }
+           
             
             do {
                 let timeline = try JSONDecoder().decode([Tweet].self, from: data)
@@ -41,4 +44,24 @@ struct TweetTimelineAPI {
         }.resume()
     }
     
+    
+    func fethImage(url:URL, completion: @escaping(UIImage?)->Void) {
+        URLSession.shared.dataTask(with: url) { (data,response,error) in
+            
+            if error != nil && data == nil {
+                print(error as Any)
+                return
+            }
+            
+            let image = UIImage(data: (data as Data?)!)
+            
+            DispatchQueue.main.async {
+                completion(image)
+            }
+            
+            
+        }.resume()
+    }
+    
 }
+
