@@ -66,7 +66,8 @@ class FeedViewControllerTests: XCTestCase {
     // Given
     let expectation = expectation(description: "load tweets")
     let result = XCTWaiter.wait(for: [expectation], timeout: 5.0)
-
+    // When
+    sut.viewDidLoad()
     // Then
     if result == XCTWaiter.Result.timedOut {
       XCTAssertTrue((sut.tableView.dataSource?.tableView(sut.tableView, numberOfRowsInSection: 0))! > 0)
