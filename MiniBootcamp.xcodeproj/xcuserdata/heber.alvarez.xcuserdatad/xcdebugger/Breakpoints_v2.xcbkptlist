@@ -1,0 +1,232 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Bucket
+   uuid = "413A80D6-7BB0-492D-BDCA-BB66D802CA2C"
+   type = "1"
+   version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "901FB045-26B7-4DC1-B709-5627714B9E42"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "MiniBootcampTests/Module Tests/TweetTimelineAPITests.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "118"
+            endingLineNumber = "118"
+            landmarkName = "testResponseWithParsingSuccess()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "14321685-19B4-4903-99CA-A3BCA2F1C249"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "MiniBootcampTests/Module Tests/TweetTimelineAPITests.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "116"
+            endingLineNumber = "116"
+            landmarkName = "testResponseWithParsingSuccess()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "14321685-19B4-4903-99CA-A3BCA2F1C249 - f97c1a03969c17c4"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "MiniBootcampTests.TweetTimelineAPITests.testResponseWithParsingSuccess() throws -&gt; ()"
+                  moduleName = "MiniBootcampTests"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/heber.alvarez/Documents/GettingStarted/Academy/Wizeline/Bootcamp/ios-testing-minibootcamp-2022/MiniBootcampTests/Module%20Tests/TweetTimelineAPITests.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "116"
+                  endingLineNumber = "116"
+                  offsetFromSymbolStart = "576">
+               </Location>
+               <Location
+                  uuid = "14321685-19B4-4903-99CA-A3BCA2F1C249 - f97c1a03969c17c4"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "MiniBootcampTests.TweetTimelineAPITests.testResponseWithParsingSuccess() throws -&gt; ()"
+                  moduleName = "MiniBootcampTests"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/heber.alvarez/Documents/GettingStarted/Academy/Wizeline/Bootcamp/ios-testing-minibootcamp-2022/MiniBootcampTests/Module%20Tests/TweetTimelineAPITests.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "116"
+                  endingLineNumber = "116"
+                  offsetFromSymbolStart = "588">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "238D564D-CE07-4F59-BB23-DD9FF889413D"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "MiniBootcampTests/Module Tests/TweetTimelineAPITests.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "113"
+            endingLineNumber = "113"
+            landmarkName = "testResponseWithParsingSuccess()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "F410DB2D-975C-472A-8958-997B20124494"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "MiniBootcampTests/Module Tests/FeedViewControllerTests.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "58"
+            endingLineNumber = "58"
+            landmarkName = "testAddButtonTapped_PrintsEmptyString()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "F410DB2D-975C-472A-8958-997B20124494 - b89aca2edfe2e839"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "MiniBootcampTests.FeedViewControllerTests.testAddButtonTapped_PrintsEmptyString() -&gt; ()"
+                  moduleName = "MiniBootcampTests"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/heber.alvarez/Documents/GettingStarted/Academy/Wizeline/Bootcamp/ios-testing-minibootcamp-2022/MiniBootcampTests/Module%20Tests/FeedViewControllerTests.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "52"
+                  endingLineNumber = "52"
+                  offsetFromSymbolStart = "53">
+               </Location>
+               <Location
+                  uuid = "F410DB2D-975C-472A-8958-997B20124494 - b89aca2edfe2e907"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "MiniBootcampTests.FeedViewControllerTests.testAddButtonTapped_PrintsEmptyString() -&gt; ()"
+                  moduleName = "MiniBootcampTests"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/heber.alvarez/Documents/GettingStarted/Academy/Wizeline/Bootcamp/ios-testing-minibootcamp-2022/MiniBootcampTests/Module%20Tests/FeedViewControllerTests.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "58"
+                  endingLineNumber = "58"
+                  offsetFromSymbolStart = "53">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "2BBFCBF8-5B4C-4FF5-92E9-C2E29C6E64B1"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "MiniBootcampTests/Module Tests/TweetTimelineAPITests.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "127"
+            endingLineNumber = "127"
+            landmarkName = "testResponseWithParsingSuccess()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "2BBFCBF8-5B4C-4FF5-92E9-C2E29C6E64B1 - f97c1a03969c1051"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "MiniBootcampTests.TweetTimelineAPITests.testResponseWithParsingSuccess() throws -&gt; ()"
+                  moduleName = "MiniBootcampTests"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/heber.alvarez/Documents/GettingStarted/Academy/Wizeline/Bootcamp/ios-testing-minibootcamp-2022/MiniBootcampTests/Module%20Tests/TweetTimelineAPITests.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "127"
+                  endingLineNumber = "127"
+                  offsetFromSymbolStart = "1078">
+               </Location>
+               <Location
+                  uuid = "2BBFCBF8-5B4C-4FF5-92E9-C2E29C6E64B1 - f97c1a03969c1051"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "MiniBootcampTests.TweetTimelineAPITests.testResponseWithParsingSuccess() throws -&gt; ()"
+                  moduleName = "MiniBootcampTests"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/heber.alvarez/Documents/GettingStarted/Academy/Wizeline/Bootcamp/ios-testing-minibootcamp-2022/MiniBootcampTests/Module%20Tests/TweetTimelineAPITests.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "127"
+                  endingLineNumber = "127"
+                  offsetFromSymbolStart = "1090">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "41EEE170-9434-4A73-8CC9-42ADECF64CFF"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "MiniBootcamp/Modules/ViewModel/ViewModel.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "34"
+            endingLineNumber = "34"
+            landmarkName = "fetchTweetTimeLine()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "04A13890-6943-4295-BE05-756FB6287740"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "MiniBootcampTests/ViewModel/ViewModelTests.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "34"
+            endingLineNumber = "34"
+            landmarkName = "testFetchTweet_WhenFetching_ReturnsLoadingState()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "920DDA44-A18F-47FE-BBD6-478C93718BB7"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "MiniBootcamp/Modules/ViewModel/ViewModel.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "43"
+            endingLineNumber = "43"
+            landmarkName = "fetchTweetTimeLine()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
+</Bucket>
