@@ -36,6 +36,30 @@ class TweetCell: UITableViewCell {
         $0.textColor = UIColor.label
         $0.numberOfLines = 0
     }
+    
+    let commentButton: UIButton = create {
+        $0.setImage(UIImage(.comment), for: .normal)
+        $0.clipsToBounds = true
+        $0.tintColor = UIColor.redMain
+    }
+
+    let retweetButton: UIButton = create {
+        $0.setImage(UIImage(.ret), for: .normal)
+        $0.clipsToBounds = true
+        $0.tintColor = UIColor.redMain
+    }
+
+    let favButton: UIButton = create {
+        $0.setImage(UIImage(.fav), for: .normal)
+        $0.clipsToBounds = true
+        $0.tintColor = UIColor.redMain
+    }
+
+    let shareButton: UIButton = create {
+        $0.setImage(UIImage(.share), for: .normal)
+        $0.clipsToBounds = true
+        $0.tintColor = UIColor.redMain
+    }
 
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
