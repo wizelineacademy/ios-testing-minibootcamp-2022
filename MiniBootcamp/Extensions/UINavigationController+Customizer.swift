@@ -13,9 +13,10 @@ extension UINavigationController {
         navigationBar.prefersLargeTitles = false
         let appearance = UINavigationBarAppearance()
         appearance.backgroundColor = .redMain
-        appearance.titleTextAttributes = [.foregroundColor: UIColor.systemBackground]
-        appearance.largeTitleTextAttributes = [.foregroundColor: UIColor.systemBackground]
-        navigationBar.tintColor = .systemBackground
+        appearance.titleTextAttributes = [.foregroundColor: UIColor.white]
+        appearance.largeTitleTextAttributes = [.foregroundColor: UIColor.white]
+        navigationBar.overrideUserInterfaceStyle = .dark
+        navigationBar.tintColor = .white
         navigationBar.standardAppearance = appearance
         navigationBar.compactAppearance = appearance
         navigationBar.scrollEdgeAppearance = appearance

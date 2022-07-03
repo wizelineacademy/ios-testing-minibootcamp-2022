@@ -16,6 +16,13 @@ class FeedViewControllerTests: XCTestCase {
         super.setUp()
         sut = FeedViewController()
         sut.loadViewIfNeeded()
+        
+//        let mainFlow = MainCoordinator(rootViewController: UINavigationController(), viewControllerFactory: iOSViewControllerFactory())
+//        mainFlow.start()
+//
+//        let navVC = mainFlow.rootViewController
+//        sut = navVC.viewControllers.first as? FeedViewController
+//        sut.loadViewIfNeeded()
     }
     
     func test_hasTitle() {
@@ -52,9 +59,19 @@ class FeedViewControllerTests: XCTestCase {
         
     }
     
+    func test_rightBarButtonIsNotNil() {
+        let rightButton = sut.navigationItem.rightBarButtonItem
+        XCTAssertNotNil(rightButton)
+    }
+    
+    func test_leftBarButtonIsNotNil() {
+        let leftButton = sut.navigationItem.leftBarButtonItem
+        XCTAssertNotNil(leftButton)
+    }
+    
     override func tearDown() {
         super.tearDown()
         sut = nil
     }
-
+    
 }
