@@ -9,7 +9,7 @@ import UIKit
 
 final class SearchCoordinator: Coordinator {
     var rootViewController: UIViewController
-    private var factory = FeedViewControllerFactory()
+    private var factory = SearchViewControllerFactory()
     
     init() {
         self.rootViewController = UINavigationController()
@@ -18,7 +18,7 @@ final class SearchCoordinator: Coordinator {
     func start() {
         guard let rootViewController = rootViewController as? UINavigationController else { return }
         rootViewController.defaultConfig()
-        rootViewController.pushViewController(factory.makeFeedController(), animated: false)
+        rootViewController.pushViewController(factory.makeSearchController(), animated: false)
     }
     
     

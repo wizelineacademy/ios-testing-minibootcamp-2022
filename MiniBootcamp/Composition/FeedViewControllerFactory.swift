@@ -10,6 +10,7 @@ import UIKit
 struct FeedViewControllerFactory {
     
     func makeFeedController() -> UIViewController {
-        return FeedViewController()
+        let viewModel = FeedViewModel(api: TweetTimelineAPI(session: .shared))
+        return FeedViewController(viewModel: viewModel)
     }
 }
