@@ -9,4 +9,5 @@ import Foundation
 
 struct MBConstants {
     static let appName = "WizeTweet"
+    static let search = "Search"
 }

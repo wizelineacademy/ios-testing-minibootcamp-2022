@@ -10,8 +10,9 @@ import UIKit
 
 class iOSViewControllerFactory: ViewControllerFactory {
     
-    func feedViewController() -> UIViewController {
-        FeedViewController()
+    func mainViewController() -> UIViewController {
+        MainTabBarController()
+        //FeedViewController()
     }
     
 }

@@ -16,6 +16,12 @@
 		45C235E828722CBA00D7AA6A /* TweetViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45C235E728722CBA00D7AA6A /* TweetViewModelTests.swift */; };
 		45C235EA287237A000D7AA6A /* MBConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45C235E9287237A000D7AA6A /* MBConstants.swift */; };
 		45C235EC2872383900D7AA6A /* UINavigationController+Customizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45C235EB2872383900D7AA6A /* UINavigationController+Customizer.swift */; };
+		45C235F028723E4E00D7AA6A /* MainTabBarTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45C235EF28723E4E00D7AA6A /* MainTabBarTest.swift */; };
+		45C235F328723EC300D7AA6A /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45C235F228723EC300D7AA6A /* MainTabBarController.swift */; };
+		45C235F5287242D100D7AA6A /* MainTabBarController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45C235F4287242D100D7AA6A /* MainTabBarController+Extension.swift */; };
+		45C235F7287246BF00D7AA6A /* FeedCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45C235F6287246BF00D7AA6A /* FeedCoordinator.swift */; };
+		45C235F92872476800D7AA6A /* FeedViewControllerFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45C235F82872476800D7AA6A /* FeedViewControllerFactory.swift */; };
+		45C235FB2872494F00D7AA6A /* SearchCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45C235FA2872494F00D7AA6A /* SearchCoordinator.swift */; };
 		45D4C2532859382400023791 /* TweetCellTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45D4C2522859382400023791 /* TweetCellTest.swift */; };
 		45D4C25528593A9600023791 /* TweetCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45D4C25428593A9600023791 /* TweetCell.swift */; };
 		45D4C25728593FD400023791 /* UIImageExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45D4C25628593FD400023791 /* UIImageExtension.swift */; };
@@ -71,6 +77,12 @@
 		45C235E728722CBA00D7AA6A /* TweetViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TweetViewModelTests.swift; sourceTree = "<group>"; };
 		45C235E9287237A000D7AA6A /* MBConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MBConstants.swift; sourceTree = "<group>"; };
 		45C235EB2872383900D7AA6A /* UINavigationController+Customizer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UINavigationController+Customizer.swift"; sourceTree = "<group>"; };
+		45C235EF28723E4E00D7AA6A /* MainTabBarTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarTest.swift; sourceTree = "<group>"; };
+		45C235F228723EC300D7AA6A /* MainTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarController.swift; sourceTree = "<group>"; };
+		45C235F4287242D100D7AA6A /* MainTabBarController+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MainTabBarController+Extension.swift"; sourceTree = "<group>"; };
+		45C235F6287246BF00D7AA6A /* FeedCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedCoordinator.swift; sourceTree = "<group>"; };
+		45C235F82872476800D7AA6A /* FeedViewControllerFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedViewControllerFactory.swift; sourceTree = "<group>"; };
+		45C235FA2872494F00D7AA6A /* SearchCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchCoordinator.swift; sourceTree = "<group>"; };
 		45D4C2522859382400023791 /* TweetCellTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TweetCellTest.swift; sourceTree = "<group>"; };
 		45D4C25428593A9600023791 /* TweetCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TweetCell.swift; sourceTree = "<group>"; };
 		45D4C25628593FD400023791 /* UIImageExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageExtension.swift; sourceTree = "<group>"; };
@@ -170,6 +182,34 @@
 			path = ViewModelTest;
 			sourceTree = "<group>";
 		};
+		45C235ED28723E2400D7AA6A /* Feed */ = {
+			isa = PBXGroup;
+			children = (
+				45C235E628722CA000D7AA6A /* ViewModelTest */,
+				9A02092F281882D9007B47CE /* FeedViewControllerTests.swift */,
+				45D4C2522859382400023791 /* TweetCellTest.swift */,
+				45C235D52872279500D7AA6A /* FeedViewModelTests.swift */,
+			);
+			path = Feed;
+			sourceTree = "<group>";
+		};
+		45C235EE28723E2E00D7AA6A /* MainTabBar */ = {
+			isa = PBXGroup;
+			children = (
+				45C235EF28723E4E00D7AA6A /* MainTabBarTest.swift */,
+			);
+			path = MainTabBar;
+			sourceTree = "<group>";
+		};
+		45C235F128723EA200D7AA6A /* MainTabBar */ = {
+			isa = PBXGroup;
+			children = (
+				45C235F228723EC300D7AA6A /* MainTabBarController.swift */,
+				45C235F4287242D100D7AA6A /* MainTabBarController+Extension.swift */,
+			);
+			path = MainTabBar;
+			sourceTree = "<group>";
+		};
 		9A0208D6281881CF007B47CE = {
 			isa = PBXGroup;
 			children = (
@@ -236,6 +276,9 @@
 				9A020917281882BE007B47CE /* MainCoordinator.swift */,
 				9A020918281882BE007B47CE /* ViewControllerFactory.swift */,
 				9A020919281882BE007B47CE /* Coordinator.swift */,
+				45C235F6287246BF00D7AA6A /* FeedCoordinator.swift */,
+				45C235F82872476800D7AA6A /* FeedViewControllerFactory.swift */,
+				45C235FA2872494F00D7AA6A /* SearchCoordinator.swift */,
 			);
 			path = Composition;
 			sourceTree = "<group>";
@@ -252,6 +295,7 @@
 		9A02091D281882BF007B47CE /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				45C235F128723EA200D7AA6A /* MainTabBar */,
 				9A02091E281882BF007B47CE /* Feed */,
 			);
 			path = Modules;
@@ -282,10 +326,8 @@
 		9A02092E281882D9007B47CE /* Module Tests */ = {
 			isa = PBXGroup;
 			children = (
-				45C235E628722CA000D7AA6A /* ViewModelTest */,
-				9A02092F281882D9007B47CE /* FeedViewControllerTests.swift */,
-				45D4C2522859382400023791 /* TweetCellTest.swift */,
-				45C235D52872279500D7AA6A /* FeedViewModelTests.swift */,
+				45C235EE28723E2E00D7AA6A /* MainTabBar */,
+				45C235ED28723E2400D7AA6A /* Feed */,
 			);
 			path = "Module Tests";
 			sourceTree = "<group>";
@@ -447,6 +489,7 @@
 			files = (
 				45C235D82872282400D7AA6A /* FeedViewModel.swift in Sources */,
 				9A020928281882BF007B47CE /* Coordinator.swift in Sources */,
+				45C235F328723EC300D7AA6A /* MainTabBarController.swift in Sources */,
 				9AAF3B6B2822F7F300A679CA /* Observer.swift in Sources */,
 				45C235DB2872285900D7AA6A /* State.swift in Sources */,
 				9A020924281882BF007B47CE /* User.swift in Sources */,
@@ -457,14 +500,18 @@
 				45D4C25728593FD400023791 /* UIImageExtension.swift in Sources */,
 				9A020927281882BF007B47CE /* ViewControllerFactory.swift in Sources */,
 				9A020926281882BF007B47CE /* MainCoordinator.swift in Sources */,
+				45C235F92872476800D7AA6A /* FeedViewControllerFactory.swift in Sources */,
 				9A02092A281882BF007B47CE /* Endpoint.swift in Sources */,
 				9A020925281882BF007B47CE /* iOSViewControllerFactory.swift in Sources */,
 				9A020929281882BF007B47CE /* TweetTimelineAPI.swift in Sources */,
 				9AD21A7B281AF3BE00A33F05 /* UIViewExtensions.swift in Sources */,
+				45C235F5287242D100D7AA6A /* MainTabBarController+Extension.swift in Sources */,
 				9A02092B281882BF007B47CE /* FeedViewController.swift in Sources */,
+				45C235FB2872494F00D7AA6A /* SearchCoordinator.swift in Sources */,
 				45C235DE287228C400D7AA6A /* TweetViewModel.swift in Sources */,
 				9A020923281882BF007B47CE /* Tweet.swift in Sources */,
 				9A0208E3281881CF007B47CE /* AppDelegate.swift in Sources */,
+				45C235F7287246BF00D7AA6A /* FeedCoordinator.swift in Sources */,
 				45D4C25528593A9600023791 /* TweetCell.swift in Sources */,
 				9A0208E5281881CF007B47CE /* SceneDelegate.swift in Sources */,
 				9A02092C281882BF007B47CE /* StaticFuncs.swift in Sources */,
@@ -484,6 +531,7 @@
 				9A5ED04D28627D4600B5AAF3 /* TweetTimelineAPITests.swift in Sources */,
 				45C235E02872291E00D7AA6A /* FakeSessionTests.swift in Sources */,
 				9A3AC4FD286B5A5A0027AF05 /* TweetMock.swift in Sources */,
+				45C235F028723E4E00D7AA6A /* MainTabBarTest.swift in Sources */,
 				9A02093D281882D9007B47CE /* FeedViewControllerTests.swift in Sources */,
 				9A020946281882D9007B47CE /* StaticFuncsTests.swift in Sources */,
 				9A020941281882D9007B47CE /* UserModelTests.swift in Sources */,
