@@ -59,7 +59,6 @@ class TweetCellTest: XCTestCase {
 	func testUserLabel_InitialConfiguration() {
 		let font = UIFont.bold(withSize: .username)
 		let textColor = UIColor.systemGray
-		
 		XCTAssertEqual(sut.userLabel.font, font)
 		XCTAssertEqual(sut.userLabel.numberOfLines, 1)
 		XCTAssertEqual(sut.userLabel.textColor, textColor)

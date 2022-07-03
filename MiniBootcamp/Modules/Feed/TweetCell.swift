@@ -101,19 +101,3 @@ final class TweetCell: UITableViewCell {
 }
 
 
-import SwiftUI
-struct CustomCellPreview: PreviewProvider {
-    static var previews: some View {
-        CellPreviewContainer().frame(width: UIScreen.main.bounds.width, height: 115, alignment: .center)
-    }
-    struct CellPreviewContainer: UIViewRepresentable {
-        func makeUIView(context: UIViewRepresentableContext<CustomCellPreview.CellPreviewContainer>) -> UITableViewCell {
-            return TweetCell()
-        }
-        func updateUIView(_ uiView: UITableViewCell, context: UIViewRepresentableContext<CustomCellPreview.CellPreviewContainer>) {
-        }
-        typealias UIViewType = UITableViewCell
-    }
-}
-
-
