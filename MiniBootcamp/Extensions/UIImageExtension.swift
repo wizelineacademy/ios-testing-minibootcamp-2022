@@ -2,23 +2,24 @@
 //  UIImageExtension.swift
 //  MiniBootcamp
 //
-//  Created by Javier Cueto on 14/06/22.
+//  Created by Abner Castro on 14/06/22.
 //
 
 import UIKit
 
 extension UIImage {
-	
-	enum Identifier: String{
-		case comment
-		case fav
-		case gato
-		case ret
-		case share
-		
-	}
-	
-	convenience init(_ identifier: Identifier) {
-		self.init(named: identifier.rawValue)!
-	}
+    
+    enum Identifier: String {
+        case comment
+        case fav
+        case gato
+        case ret
+        case share
+        
+    }
+    
+    convenience init(_ identifier: Identifier) {
+        self.init(named: identifier.rawValue)!
+    }
+    
 }
