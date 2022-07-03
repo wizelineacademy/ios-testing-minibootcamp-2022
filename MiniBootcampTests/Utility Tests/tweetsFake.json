@@ -5,13 +5,13 @@
     "text": "This is example one",
     "user": {
       "name": "Wizeboot",
-      "screen_name": "@wizeboot",
+      "screen_name": "wizeboot",
       "description": "description",
       "location": "location",
       "followers_count": 100,
       "created_at": "creation",
       "profile_background_color": "red",
-      "profile_image_url": "url",
+      "profile_image_url_https": "url",
       "profile_background_image_url": "url"
     },
     "favorite_count": 100,
@@ -23,13 +23,13 @@
     "text": "This is example two",
     "user": {
       "name": "Wizeboot",
-      "screen_name": "@wizeboot",
+      "screen_name": "wizeboot",
       "description": "description",
       "location": "location",
       "followers_count": 200,
       "created_at": "creation",
       "profile_background_color": "blue",
-      "profile_image_url": "url",
+      "profile_image_url_https": "url",
       "profile_background_image_url": "url"
     },
     "favorite_count": 200,

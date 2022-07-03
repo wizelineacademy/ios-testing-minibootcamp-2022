@@ -12,6 +12,8 @@ final class FeedViewController: UITableViewController {
 
     var viewModel: FeedViewModel
     
+    private let dispatchQueueGlobal = DispatchQueue.global()
+    
     
     init(viewModel: FeedViewModel) {
         self.viewModel = viewModel
@@ -69,7 +71,22 @@ final class FeedViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         guard viewModel.timeline.count > 0, let cell: TweetCell = tableView.dequeueReusableCell(withIdentifier: "TweetCell") as? TweetCell else { return TweetCell() }
-        cell.contentLabel.text = viewModel.timeline[indexPath.row].content
+        let viewModel = viewModel.timeline[indexPath.row]
+        cell.configData(viewModel: viewModel)
+        
+        if let url = viewModel.url {
+            dispatchQueueGlobal.async {
+                if let data = try? Data(contentsOf: url ) {
+                    if let image = UIImage(data: data) {
+                        DispatchQueue.main.async {
+                            cell.configImage(userImage: image)
+                        }
+                    }
+                }
+            }
+        }
+        
+
         return cell
     }
     

@@ -94,9 +94,16 @@ final class TweetCell: UITableViewCell {
         
         addSubview(mainContainerStackView)
         mainContainerStackView.anchor(top: topAnchor, leading: userImageView.trailingAnchor, trailing: trailingAnchor, bottom: bottomAnchor, padding: UIEdgeInsets(top: 10, left: 15, bottom: 10, right: 15))
-        
-        
-        
+    }
+    
+    func configData(viewModel: TweetViewModel) {
+        nameLabel.text = viewModel.name
+        userLabel.text = viewModel.userName
+        contentLabel.text = viewModel.content
+    }
+    
+    func configImage(userImage: UIImage) {
+        userImageView.image = userImage
     }
 }
 

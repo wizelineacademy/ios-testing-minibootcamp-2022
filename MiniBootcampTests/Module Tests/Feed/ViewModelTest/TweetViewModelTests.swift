@@ -22,6 +22,7 @@ class TweetViewModelTests: XCTestCase {
         XCTAssertEqual(sut.content, "This is an example")
         XCTAssertEqual(sut.name, "Wizeboot")
         XCTAssertEqual(sut.userName, "@wizeboot")
+        XCTAssertEqual(sut.url, URL(string: "url"))
         
     }
 }
