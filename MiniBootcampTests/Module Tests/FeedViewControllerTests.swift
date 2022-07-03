@@ -18,6 +18,10 @@ class FeedViewControllerTests: XCTestCase {
         sut.loadViewIfNeeded()
     }
     
+    func test_hasTitle() {
+        XCTAssertEqual(sut.title,"WizeTweet")
+    }
+    
     func test_vc_backgroundIsSystemBackground() {
         
         XCTAssertNotNil(sut.view?.backgroundColor)

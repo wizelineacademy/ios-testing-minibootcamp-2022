@@ -13,6 +13,9 @@
 		45C235DE287228C400D7AA6A /* TweetViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45C235DD287228C400D7AA6A /* TweetViewModel.swift */; };
 		45C235E02872291E00D7AA6A /* FakeSessionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45C235DF2872291E00D7AA6A /* FakeSessionTests.swift */; };
 		45C235E528722B4000D7AA6A /* tweetsFake.json in Resources */ = {isa = PBXBuildFile; fileRef = 45C235E428722A6C00D7AA6A /* tweetsFake.json */; };
+		45C235E828722CBA00D7AA6A /* TweetViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45C235E728722CBA00D7AA6A /* TweetViewModelTests.swift */; };
+		45C235EA287237A000D7AA6A /* MBConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45C235E9287237A000D7AA6A /* MBConstants.swift */; };
+		45C235EC2872383900D7AA6A /* UINavigationController+Customizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45C235EB2872383900D7AA6A /* UINavigationController+Customizer.swift */; };
 		45D4C2532859382400023791 /* TweetCellTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45D4C2522859382400023791 /* TweetCellTest.swift */; };
 		45D4C25528593A9600023791 /* TweetCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45D4C25428593A9600023791 /* TweetCell.swift */; };
 		45D4C25728593FD400023791 /* UIImageExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45D4C25628593FD400023791 /* UIImageExtension.swift */; };
@@ -65,6 +68,9 @@
 		45C235DD287228C400D7AA6A /* TweetViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TweetViewModel.swift; sourceTree = "<group>"; };
 		45C235DF2872291E00D7AA6A /* FakeSessionTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FakeSessionTests.swift; sourceTree = "<group>"; };
 		45C235E428722A6C00D7AA6A /* tweetsFake.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = tweetsFake.json; sourceTree = "<group>"; };
+		45C235E728722CBA00D7AA6A /* TweetViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TweetViewModelTests.swift; sourceTree = "<group>"; };
+		45C235E9287237A000D7AA6A /* MBConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MBConstants.swift; sourceTree = "<group>"; };
+		45C235EB2872383900D7AA6A /* UINavigationController+Customizer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UINavigationController+Customizer.swift"; sourceTree = "<group>"; };
 		45D4C2522859382400023791 /* TweetCellTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TweetCellTest.swift; sourceTree = "<group>"; };
 		45D4C25428593A9600023791 /* TweetCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TweetCell.swift; sourceTree = "<group>"; };
 		45D4C25628593FD400023791 /* UIImageExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageExtension.swift; sourceTree = "<group>"; };
@@ -154,6 +160,14 @@
 				9A3AC4FC286B5A5A0027AF05 /* TweetMock.swift */,
 			);
 			path = Mocks;
+			sourceTree = "<group>";
+		};
+		45C235E628722CA000D7AA6A /* ViewModelTest */ = {
+			isa = PBXGroup;
+			children = (
+				45C235E728722CBA00D7AA6A /* TweetViewModelTests.swift */,
+			);
+			path = ViewModelTest;
 			sourceTree = "<group>";
 		};
 		9A0208D6281881CF007B47CE = {
@@ -260,6 +274,7 @@
 			children = (
 				9A020921281882BF007B47CE /* StaticFuncs.swift */,
 				9AAF3B6A2822F7F300A679CA /* Observer.swift */,
+				45C235E9287237A000D7AA6A /* MBConstants.swift */,
 			);
 			path = Utility;
 			sourceTree = "<group>";
@@ -267,6 +282,7 @@
 		9A02092E281882D9007B47CE /* Module Tests */ = {
 			isa = PBXGroup;
 			children = (
+				45C235E628722CA000D7AA6A /* ViewModelTest */,
 				9A02092F281882D9007B47CE /* FeedViewControllerTests.swift */,
 				45D4C2522859382400023791 /* TweetCellTest.swift */,
 				45C235D52872279500D7AA6A /* FeedViewModelTests.swift */,
@@ -321,6 +337,7 @@
 				9AD21A7A281AF3BE00A33F05 /* UIViewExtensions.swift */,
 				9A64D3452822E34400D54132 /* UIFontExtensions.swift */,
 				45D4C25628593FD400023791 /* UIImageExtension.swift */,
+				45C235EB2872383900D7AA6A /* UINavigationController+Customizer.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -434,6 +451,8 @@
 				45C235DB2872285900D7AA6A /* State.swift in Sources */,
 				9A020924281882BF007B47CE /* User.swift in Sources */,
 				9A64D3462822E34400D54132 /* UIFontExtensions.swift in Sources */,
+				45C235EC2872383900D7AA6A /* UINavigationController+Customizer.swift in Sources */,
+				45C235EA287237A000D7AA6A /* MBConstants.swift in Sources */,
 				9A02092D281882BF007B47CE /* UIColorExtensions.swift in Sources */,
 				45D4C25728593FD400023791 /* UIImageExtension.swift in Sources */,
 				9A020927281882BF007B47CE /* ViewControllerFactory.swift in Sources */,
@@ -458,6 +477,7 @@
 			files = (
 				45C235D62872279500D7AA6A /* FeedViewModelTests.swift in Sources */,
 				9A02093F281882D9007B47CE /* iOSViewControllerFactoryTests.swift in Sources */,
+				45C235E828722CBA00D7AA6A /* TweetViewModelTests.swift in Sources */,
 				9AAF3B692822F7D900A679CA /* ObserverTests.swift in Sources */,
 				9A3AC4FF286B5AC60027AF05 /* UserMock.swift in Sources */,
 				9A020940281882D9007B47CE /* TweetModelTests.swift in Sources */,

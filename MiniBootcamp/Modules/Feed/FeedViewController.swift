@@ -15,11 +15,15 @@ class FeedViewController: UIViewController, UITableViewDelegate, UITableViewData
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        configUI()
+    }
+    
+    private func configUI(){
+        title = MBConstants.appName
         view.backgroundColor = .systemBackground
         tableView.dataSource = self
         tableView.delegate = self
         view.addSubview(tableView)
-        
         tableView.anchor(top: view.topAnchor, leading: view.leadingAnchor, trailing: view.trailingAnchor, bottom: view.bottomAnchor)
     }
     
@@ -30,5 +34,6 @@ class FeedViewController: UIViewController, UITableViewDelegate, UITableViewData
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         TweetCell()
     }
+    
 
 }
