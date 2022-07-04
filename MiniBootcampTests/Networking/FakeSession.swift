@@ -9,11 +9,12 @@ import Foundation
 
 class FakeSession: URLSession {
   var data: Data?
+  var response: URLResponse?
   var error: Error?
 
   override func dataTask(with request: URLRequest, completionHandler: @escaping (Data?, URLResponse?, Error?) -> Void) -> URLSessionDataTask {
     MockDataTask {
-      completionHandler(self.data, nil, self.error)
+      completionHandler(self.data, self.response, self.error)
     }
   }
 }
@@ -27,7 +28,7 @@ class MockDataTask: URLSessionDataTask {
   }
 
   override func resume() {
-    DispatchQueue.global().asyncAfter(deadline: DispatchTime.now() + 3.0) {
+    DispatchQueue.global().asyncAfter(deadline: DispatchTime.now() + 1.0) {
       self.closure()
     }
   }

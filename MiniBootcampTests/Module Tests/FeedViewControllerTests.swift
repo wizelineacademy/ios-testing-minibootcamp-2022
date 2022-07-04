@@ -54,8 +54,10 @@ class FeedViewControllerTests: XCTestCase {
 //    XCTAssertNotNil(cell)
   }
 
-  func testAddButtonTapped_PrintsEmptyString() {
+  func testAddButton_isNotNil() throws {
     sut.viewDidLoad()
+    let addTapButton: UIBarButtonItem = try XCTUnwrap(sut.navigationItem.rightBarButtonItem)
+    XCTAssertNotNil(addTapButton)
   }
 
   func testViewControllerHasViewModel() {
@@ -65,7 +67,7 @@ class FeedViewControllerTests: XCTestCase {
   func testViewController_WhenDidLoad_ReloadsTableView() {
     // Given
     let expectation = expectation(description: "load tweets")
-    let result = XCTWaiter.wait(for: [expectation], timeout: 5.0)
+    let result = XCTWaiter.wait(for: [expectation], timeout: 8.0)
     // When
     sut.viewDidLoad()
     // Then
@@ -76,5 +78,11 @@ class FeedViewControllerTests: XCTestCase {
     }
   }
 
-  // MARK: -
+  // MARK: - Profile Unit Tests
+  func test_showProfileButton_isNotNil() throws {
+    // Given
+    let profileButton: UIBarButtonItem = try XCTUnwrap(sut.navigationItem.leftBarButtonItem)
+    // Then
+    XCTAssertNotNil(profileButton)
+  }
 }

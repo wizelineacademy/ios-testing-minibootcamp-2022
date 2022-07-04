@@ -9,5 +9,6 @@ import Foundation
 import UIKit
 
 protocol ViewControllerFactory {
-    func feedViewController() -> UIViewController
+  func feedViewController() -> UIViewController
+  func composeTweetViewController() -> UIViewController
 }

@@ -9,9 +9,13 @@ import Foundation
 import UIKit
 
 class iOSViewControllerFactory: ViewControllerFactory {
-    
-    func feedViewController() -> UIViewController {
-        FeedViewController()
-    }
-    
+  
+  func feedViewController() -> UIViewController {
+    FeedViewController()
+  }
+  
+  func composeTweetViewController() -> UIViewController {
+    ComposeTweetViewController()
+  }
+  
 }

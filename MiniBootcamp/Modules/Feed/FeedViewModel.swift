@@ -7,7 +7,7 @@
 
 import Foundation
 
-class ViewModel {
+class FeedViewModel {
   var api: TweetTimelineAPI
   var state: Observer<TweetState> = Observer<TweetState>()
   var timeline: [TweetViewModel] = []

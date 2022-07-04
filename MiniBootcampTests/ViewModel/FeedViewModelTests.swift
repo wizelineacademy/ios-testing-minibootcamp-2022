@@ -8,8 +8,8 @@
 import XCTest
 @testable import MiniBootcamp
 
-class ViewModelTests: XCTestCase {
-  var sut: ViewModel!
+class FeedViewModelTests: XCTestCase {
+  var sut: FeedViewModel!
   var api: TweetTimelineAPI!
   var fakeSession: FakeSession!
 
@@ -17,7 +17,7 @@ class ViewModelTests: XCTestCase {
       try super.setUpWithError()
       fakeSession = FakeSession()
       api = TweetTimelineAPI(session: fakeSession)
-      sut = ViewModel(api: api)
+      sut = FeedViewModel(api: api)
     }
 
     override func tearDownWithError() throws {
@@ -51,7 +51,7 @@ class ViewModelTests: XCTestCase {
     // When
     sut.fetchTweetTimeLine()
     // Then
-    wait(for: [expectation], timeout: 4.0)
+    wait(for: [expectation], timeout: 3.0)
     XCTAssertTrue(changeState)
   }
 
@@ -72,7 +72,7 @@ class ViewModelTests: XCTestCase {
     // When
     sut.fetchTweetTimeLine()
     // Then
-    wait(for: [expectation], timeout: 5.0)
+    wait(for: [expectation], timeout: 3.0)
     XCTAssertTrue(failureState)
   }
 
@@ -91,7 +91,7 @@ class ViewModelTests: XCTestCase {
     // When
     sut.fetchTweetTimeLine()
     // Then
-    wait(for: [expectation], timeout: 4.0)
+    wait(for: [expectation], timeout: 3.0)
     XCTAssertTrue(sut.timeline.count > 0)
   }
 }

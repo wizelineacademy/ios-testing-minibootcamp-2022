@@ -8,9 +8,10 @@
 import Foundation
 
 enum TweetAPIError: Error {
-    case noData
-    case response
-    case parsingData
+  case noData
+  case response
+  case parsingData
+  case internalServer
 }
 
 struct TweetTimelineAPI {
