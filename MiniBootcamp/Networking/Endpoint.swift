@@ -20,7 +20,7 @@ extension Endpoint {
         case .timeline:
             return "/api/statuses/user_timeline"
         case .search(let text):
-            return "/api/statuses/search/\(text)"
+            return "/api/search/\(text)"
         }
     }
     
@@ -31,6 +31,7 @@ extension Endpoint {
             return URLRequest(url: url)
         case .search:
             let url = URL(string: Endpoint.baseURL + string)!
+            print(url.absoluteString)
             return URLRequest(url: url)
         }
     }

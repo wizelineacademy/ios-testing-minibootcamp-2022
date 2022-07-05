@@ -65,7 +65,7 @@ class SearchViewModelTests: XCTestCase {
     
     func test_whenSearchIsRequested_stateIsSuccess() throws {
         let text = "minions"
-        fakeSession.data = try TweetMock().tweetsData()
+        fakeSession.data = try TweetMock().tweetsSearch()
         let expect = expectation(description: "search succeed")
         sut.state.bind { state in
             switch state {
@@ -84,7 +84,7 @@ class SearchViewModelTests: XCTestCase {
     
     func test_whenStateSuccess_searchHasData() throws {
         let text = "minions"
-        fakeSession.data = try TweetMock().tweetsData()
+        fakeSession.data = try TweetMock().tweetsSearch()
         let expect = expectation(description: "search has data")
         sut.state.bind { state in
             switch state {

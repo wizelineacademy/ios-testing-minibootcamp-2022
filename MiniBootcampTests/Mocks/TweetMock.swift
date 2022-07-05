@@ -40,6 +40,13 @@ class TweetMock {
         return data
     }
     
+    func tweetsSearch() throws -> Data {
+        guard let path = Bundle(for: type(of: self)).path(forResource: "searchingData", ofType: "json") else { fatalError("Couldn't find tweetsFake.json file") }
+        
+        let data = try Data(contentsOf: URL(fileURLWithPath: path))
+        return data
+    }
+    
     func tweetModel() -> [Tweet] {
         return []
     }

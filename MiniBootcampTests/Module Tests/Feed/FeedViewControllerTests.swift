@@ -18,13 +18,6 @@ class FeedViewControllerTests: XCTestCase {
         sut = FeedViewController(viewModel: viewModel)
         
         sut.loadViewIfNeeded()
-        
-        //        let mainFlow = MainCoordinator(rootViewController: UINavigationController(), viewControllerFactory: iOSViewControllerFactory())
-        //        mainFlow.start()
-        //
-        //        let navVC = mainFlow.rootViewController
-        //        sut = navVC.viewControllers.first as? FeedViewController
-        //        sut.loadViewIfNeeded()
     }
     
     func testInitWithCoder() {

@@ -10,6 +10,8 @@ import UIKit
 struct SearchViewControllerFactory {
     
     func makeSearchController() -> UIViewController {
-        return SearchViewController()
+        let api = TweetTimelineAPI(session: .shared)
+        let viewModel = SearchViewModel(api: api)
+        return SearchViewController(viewModel: viewModel)
     }
 }
