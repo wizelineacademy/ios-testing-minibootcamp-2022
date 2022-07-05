@@ -10,7 +10,7 @@ import UIKit
 
 class MainCoordinator: Coordinator {
     
-    var rootViewController: UINavigationController
+    var rootViewController: UIViewController
     var viewControllerFactory: ViewControllerFactory
     
     init(rootViewController: UINavigationController, viewControllerFactory: ViewControllerFactory) {
@@ -19,7 +19,8 @@ class MainCoordinator: Coordinator {
     }
     
     func start() {
-        rootViewController.pushViewController(viewControllerFactory.feedViewController(), animated: false)
+        //rootViewController.defaultConfig()
+        rootViewController = viewControllerFactory.mainViewController()// , animated: false)
     }
     
 }

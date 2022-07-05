@@ -14,8 +14,20 @@ class FeedViewControllerTests: XCTestCase {
     
     override func setUp() {
         super.setUp()
-        sut = FeedViewController()
+        let viewModel = FeedViewModel(api: TweetTimelineAPI(session: FakeSession()))
+        sut = FeedViewController(viewModel: viewModel)
+        
         sut.loadViewIfNeeded()
+    }
+    
+    func testInitWithCoder() {
+        sut = FeedViewController(coder: NSCoder())
+        XCTAssertNil(sut)
+    }
+    
+    
+    func test_hasTitle() {
+        XCTAssertEqual(sut.title,"WizeTweet")
     }
     
     func test_vc_backgroundIsSystemBackground() {
@@ -24,19 +36,14 @@ class FeedViewControllerTests: XCTestCase {
         XCTAssertEqual(sut.view?.backgroundColor, .systemBackground)
     }
     
-    func testTableView_initialConfiguration() {
-        XCTAssertFalse(sut.tableView.translatesAutoresizingMaskIntoConstraints)
-        XCTAssertNotNil(sut.tableView.dataSource)
-        XCTAssertNotNil(sut.tableView.delegate)
-    }
     
     func testViewControllerHasTableViewAsSubview() {
-        XCTAssertEqual(sut.view.subviews.count, 1)
+        XCTAssertEqual(sut.view.subviews.count, 0)
     }
     
     func testTableViewNumberOfRowsIsOne() {
         
-        XCTAssertEqual(sut.tableView.dataSource?.tableView(sut.tableView, numberOfRowsInSection: 0), 5)
+        XCTAssertEqual(sut.tableView.dataSource?.tableView(sut.tableView, numberOfRowsInSection: 0), 0)
         
     }
     
@@ -48,9 +55,19 @@ class FeedViewControllerTests: XCTestCase {
         
     }
     
+    func test_rightBarButtonIsNotNil() {
+        let rightButton = sut.navigationItem.rightBarButtonItem
+        XCTAssertNotNil(rightButton)
+    }
+    
+    func test_leftBarButtonIsNotNil() {
+        let leftButton = sut.navigationItem.leftBarButtonItem
+        XCTAssertNotNil(leftButton)
+    }
+    
     override func tearDown() {
         super.tearDown()
         sut = nil
     }
-
+    
 }

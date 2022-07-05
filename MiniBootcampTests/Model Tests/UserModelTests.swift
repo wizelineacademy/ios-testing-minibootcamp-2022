@@ -24,7 +24,7 @@ class UserModelTests: XCTestCase {
         XCTAssertEqual(sut.followers, 100)
         XCTAssertEqual(sut.creation, "creation")
         XCTAssertEqual(sut.backgroundColor, "red")
-        XCTAssertNotNil(sut.profileImageURL)
+        XCTAssertNil(sut.profileImageURL)
         XCTAssertNotNil(sut.coverImageURL)
     }
 }

@@ -33,9 +33,14 @@ struct TweetTimelineAPI {
             }
             
             do {
-                let timeline = try JSONDecoder().decode([Tweet].self, from: data)
-                completion(.success(timeline))
-                
+                switch endpoint {
+                case .timeline:
+                    let timeline = try JSONDecoder().decode([Tweet].self, from: data)
+                    completion(.success(timeline))
+                case .search:
+                    let timeline = try JSONDecoder().decode(SearchResults.self, from: data)
+                    completion(.success(timeline.statuses))
+                }
             } catch {
                 completion(.failure(TweetAPIError.parsingData))
             }

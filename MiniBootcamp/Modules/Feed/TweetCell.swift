@@ -1,59 +1,110 @@
 //
-//  TweetCell.swift
+//  TableViewCell.swift
 //  MiniBootcamp
 //
-//  Created by Abner Castro on 14/06/22.
+//  Created by Javier Cueto on 14/06/22.
 //
 
 import UIKit
 
-class TweetCell: UITableViewCell {
-    required init?(coder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
-    }
+final class TweetCell: UITableViewCell {
     
     let userImageView: UIImageView = create {
         $0.image = UIImage(.gato)
         $0.layer.cornerRadius = 25
         $0.clipsToBounds = true
+        
     }
     
+    lazy var mainContainerStackView: UIStackView =  {
+        let stackView = UIStackView(arrangedSubviews: [labelContainerStackView, optionsContainerStackView])
+        stackView.axis = .vertical
+        stackView.spacing = 10
+        return stackView
+    }()
+    
     let nameLabel: UILabel = create {
-        $0.text = "Holaaaa"
         $0.font = UIFont.bold(withSize: .name)
+        $0.text = "WizeBoot"
         $0.adjustsFontSizeToFitWidth = true
     }
     
-    let usernameLabel: UILabel = create {
-        $0.text = "@hellowizeline_"
+    let userLabel: UILabel = create {
         $0.font = UIFont.bold(withSize: .username)
+        $0.text = "@wizeBootService"
         $0.textColor = UIColor.systemGray
     }
     
     let contentLabel: UILabel = create {
-        $0.text = "This is a test on showing about how a tweet content can be displayed on the TweetCell ✌🏼😎"
         $0.font = UIFont.normal(withSize: .content)
         $0.textColor = UIColor.label
+        $0.text = "Welcome gadkfgnsdkjgnskdjfffffgnksj"
         $0.numberOfLines = 0
     }
-
+    
+    lazy var labelContainerStackView: UIStackView =  {
+        let stackView = UIStackView(arrangedSubviews: [nameLabel, userLabel, contentLabel])
+        stackView.axis = .vertical
+        stackView.distribution = .equalSpacing
+        return stackView
+    }()
+    
+    lazy var optionsContainerStackView: UIStackView =  {
+        let stackView = UIStackView(arrangedSubviews: [commentButton, retweetButton, favoriteButton, shareButton])
+        stackView.distribution = .equalSpacing
+        return stackView
+    }()
+    
+    let commentButton: UIButton = create {
+        $0.setImage(UIImage(.comment).withRenderingMode(.alwaysTemplate), for: .normal)
+        $0.tintColor = .redMain
+    }
+    
+    let retweetButton: UIButton = create {
+        $0.setImage(UIImage(.ret).withRenderingMode(.alwaysTemplate), for: .normal)
+        $0.tintColor = .redMain
+    }
+    
+    let favoriteButton: UIButton = create {
+        $0.setImage(UIImage(.fav).withRenderingMode(.alwaysTemplate), for: .normal)
+        $0.tintColor = .redMain
+    }
+    
+    let shareButton: UIButton = create {
+        $0.setImage(UIImage(.share).withRenderingMode(.alwaysTemplate), for: .normal)
+        $0.tintColor = .redMain
+    }
+    
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
+        configUI()
+
         
+    }
+    
+    
+    required init?(coder: NSCoder) {
+        return nil
+    }
+    
+    private func configUI() {
         backgroundColor = .systemBackground
-        addSubview(nameLabel)
-        addSubview(usernameLabel)
         addSubview(userImageView)
-        addSubview(contentLabel)
-        addConstraints()
+        userImageView.anchor(top: topAnchor, leading: leadingAnchor, trailing: nil, bottom: nil, padding: UIEdgeInsets(top: 10, left: 10, bottom: 0, right: 0), size: CGSize(width: 60, height: 60))
+        
+        addSubview(mainContainerStackView)
+        mainContainerStackView.anchor(top: topAnchor, leading: userImageView.trailingAnchor, trailing: trailingAnchor, bottom: bottomAnchor, padding: UIEdgeInsets(top: 10, left: 15, bottom: 10, right: 15))
     }
     
-    private func addConstraints() {
-        userImageView.anchor(top: topAnchor, leading: leadingAnchor, trailing: nil, bottom: nil, padding: .init(top: 12, left: 12, bottom: 0, right: 0), size: .init(width: 50, height: 50))
-        nameLabel.anchor(top: userImageView.topAnchor, leading: userImageView.trailingAnchor, trailing: trailingAnchor, bottom: nil, padding: .init(top: 0, left: 4, bottom: 0, right: 12), size: .init(width: 0, height: 20))
-        usernameLabel.anchor(top: nameLabel.bottomAnchor, leading: nameLabel.leadingAnchor, trailing: nameLabel.trailingAnchor, bottom: nil, padding: .init(top: 0, left: 0, bottom: 0, right: 0), size: .init(width: 0, height: 20))
-        contentLabel.anchor(top: usernameLabel.bottomAnchor, leading: usernameLabel.leadingAnchor, trailing: usernameLabel.trailingAnchor, bottom: bottomAnchor, padding: .init(top: 16, left: 0, bottom: 16, right: 0))
+    func configData(viewModel: TweetViewModel) {
+        nameLabel.text = viewModel.name
+        userLabel.text = viewModel.userName
+        contentLabel.text = viewModel.content
     }
     
-    
+    func configImage(userImage: UIImage) {
+        userImageView.image = userImage
+    }
 }
+
+

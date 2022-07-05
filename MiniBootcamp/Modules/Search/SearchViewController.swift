@@ -1,21 +1,18 @@
 //
-//  FeedViewController.swift
-//  Mini bootcamp
+//  SearchViewController.swift
+//  MiniBootcamp
 //
-//  Created by Abner Castro on 07/04/22.
+//  Created by Javier Cueto on 03/07/22.
 //
 
 import UIKit
 
-final class FeedViewController: UITableViewController {
+final class SearchViewController: UITableViewController {
     
-
-    var viewModel: FeedViewModel
-    
+    private let viewModel: SearchViewModel
     private let dispatchQueueGlobal = DispatchQueue.global()
-    
-    
-    init(viewModel: FeedViewModel) {
+    private let searchController = UISearchController(searchResultsController: nil)
+    init(viewModel: SearchViewModel) {
         self.viewModel = viewModel
         super.init(nibName: nil, bundle: nil)
     }
@@ -27,54 +24,48 @@ final class FeedViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         configUI()
-        configBarButtons()
         configBinding()
-        viewModel.fetchTweetTimeLine()
     }
     
     private func configUI(){
-        title = MBConstants.appName
-        view.backgroundColor = .systemBackground
+        title = viewModel.title
         tableView.register(TweetCell.self, forCellReuseIdentifier: "TweetCell")
-    }
-    
-    private func configBarButtons() {
-        let rightButton = UIBarButtonItem(barButtonSystemItem: .add, target: nil, action: nil)
-        navigationItem.rightBarButtonItem = rightButton
-        
-        let leftButton = UIBarButtonItem(image: UIImage(systemName: "person"), style: .plain, target: nil, action: nil)
-        navigationItem.leftBarButtonItem = leftButton
+        searchController.searchResultsUpdater = self
+        navigationItem.searchController = searchController
+        navigationItem.hidesSearchBarWhenScrolling = false
+        view.backgroundColor = .systemBackground
     }
     
     private func configBinding() {
         viewModel.state.bind { [weak self] state in
             DispatchQueue.main.async {
-              guard let stateNotNil = state else { return }
-              switch stateNotNil {
-              case .loading:
-                print("loading")
-              case .success:
-                // dismissLoader
-                self?.tableView.reloadData()
-                print("success")
-              case .failure:
-                print("failure")
-              }
+                guard let stateNotNil = state else { return }
+                switch stateNotNil {
+                case .loading:
+                    print("loading")
+                case .success:
+                    // dismissLoader
+                    self?.tableView.reloadData()
+                    print("success")
+                case .failure:
+                    print("failure")
+                }
             }
-          }
+        }
     }
+    
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         viewModel.timeline.count
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        
         guard viewModel.timeline.count > 0, let cell: TweetCell = tableView.dequeueReusableCell(withIdentifier: "TweetCell") as? TweetCell else { return TweetCell() }
         let viewModel = viewModel.timeline[indexPath.row]
         cell.configData(viewModel: viewModel)
         
         if let url = viewModel.url {
+			print(url)
             dispatchQueueGlobal.async {
                 if let data = try? Data(contentsOf: url ) {
                     if let image = UIImage(data: data) {
@@ -86,9 +77,23 @@ final class FeedViewController: UITableViewController {
             }
         }
         
-
+        
         return cell
     }
     
-
+    @objc
+    func searchingText() {
+        guard let text = searchController.searchBar.text else { return }
+        viewModel.search(text)
+    }
+    
 }
+
+
+extension SearchViewController: UISearchResultsUpdating {
+    func updateSearchResults(for searchController: UISearchController) {
+        NSObject.cancelPreviousPerformRequests(withTarget: self, selector: #selector(self.searchingText), object: nil)
+        self.perform(#selector(self.searchingText), with: nil, afterDelay: MBConstants.throttleTypeTime)
+    }
+}
+

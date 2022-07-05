@@ -29,7 +29,7 @@ extension User {
         case followers = "followers_count"
         case creation = "created_at"
         case backgroundColor = "profile_background_color"
-        case profileImageURL = "profile_image_url"
+        case profileImageURL = "profile_image_url_https"
         case coverImageURL = "profile_background_image_url"
     }
     

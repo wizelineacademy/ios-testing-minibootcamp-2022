@@ -13,7 +13,7 @@ class iOSViewControllerFactoryTests: XCTestCase {
     func test_feedViewController_isFeedViewControllerType() {
         
         let sut = iOSViewControllerFactory()
-        let feedVC = sut.feedViewController() as? FeedViewController
+        let feedVC = sut.mainViewController() as? MainTabBarController
         XCTAssertNotNil(feedVC)
         
     }
