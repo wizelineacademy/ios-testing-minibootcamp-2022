@@ -31,7 +31,6 @@ extension Endpoint {
             return URLRequest(url: url)
         case .search:
             let url = URL(string: Endpoint.baseURL + string)!
-            print(url.absoluteString)
             return URLRequest(url: url)
         }
     }

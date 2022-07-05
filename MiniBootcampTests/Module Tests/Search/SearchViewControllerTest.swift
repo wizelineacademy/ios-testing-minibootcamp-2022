@@ -13,13 +13,14 @@ class SearchViewControllerTests: XCTestCase {
     var sut: SearchViewController!
     var fakeSession: FakeSession!
     var api: TweetTimelineAPI!
+	var viewModel: SearchViewModel!
     
     override func setUp() {
         super.setUp()
         fakeSession = FakeSession()
         api = TweetTimelineAPI(session: fakeSession)
         
-        let viewModel = SearchViewModel(api: api)
+		viewModel = SearchViewModel(api: api)
         sut = SearchViewController(viewModel: viewModel)
         sut.loadViewIfNeeded()
         
@@ -57,13 +58,51 @@ class SearchViewControllerTests: XCTestCase {
         
     }
     
-    func testTableViewCell_cellIsTweetCell() {
-        
-        let cell = sut.tableView(sut.tableView, cellForRowAt: IndexPath(row: 0, section: 0)) as? TweetCell
-        
-        XCTAssertNotNil(cell)
+    func testTableViewCell_cellIsTweetCell() throws {
+		
+		fakeSession = FakeSession()
+		api = TweetTimelineAPI(session: fakeSession)
+		
+		viewModel = SearchViewModel(api: api)
+		sut = SearchViewController(viewModel: viewModel)
+		sut.loadViewIfNeeded()
+		fakeSession.data = try TweetMock().tweetsSearch()
+
+		viewModel.search("minion")
+		let exp = expectation(description: "Waiting for searching")
+		let result = XCTWaiter.wait(for: [exp], timeout: 5)
+		if result == XCTWaiter.Result.timedOut {
+			print(viewModel.timeline.count)
+			let cell = sut.tableView(sut.tableView, cellForRowAt: IndexPath(row: 0, section: 0)) as? TweetCell
+			XCTAssertNotNil(cell)
+		} else {
+			XCTFail("Text is not correct or timed out first")
+		}
+
         
     }
+	
+	func test_configBindingFailed() throws {
+		
+		fakeSession = FakeSession()
+		api = TweetTimelineAPI(session: fakeSession)
+		
+		viewModel = SearchViewModel(api: api)
+		sut = SearchViewController(viewModel: viewModel)
+		sut.loadViewIfNeeded()
+		fakeSession.data = try TweetMock().tweetData()
+
+		viewModel.search("minion")
+		let exp = expectation(description: "Waiting for searching")
+		let result = XCTWaiter.wait(for: [exp], timeout: 5)
+		if result == XCTWaiter.Result.timedOut {
+			XCTAssertEqual(viewModel.state.value, State.failure)
+		} else {
+			XCTFail("Text is not correct or timed out first")
+		}
+
+		
+	}
     
     func test_WhenUserIsTyping_SearchingText() {
         sut.navigationController?.navigationItem.searchController = UISearchController(searchResultsController: nil)
@@ -96,6 +135,9 @@ class SearchViewControllerTests: XCTestCase {
     override func tearDown() {
         super.tearDown()
         sut = nil
+		fakeSession = nil
+		api = nil
+		viewModel = nil
     }
     
 }

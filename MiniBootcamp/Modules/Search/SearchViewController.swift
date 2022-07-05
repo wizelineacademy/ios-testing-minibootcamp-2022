@@ -65,6 +65,7 @@ final class SearchViewController: UITableViewController {
         cell.configData(viewModel: viewModel)
         
         if let url = viewModel.url {
+			print(url)
             dispatchQueueGlobal.async {
                 if let data = try? Data(contentsOf: url ) {
                     if let image = UIImage(data: data) {
