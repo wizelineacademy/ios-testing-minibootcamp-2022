@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4533476C2873C6B0007C4F33 /* SearchViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4533476B2873C6B0007C4F33 /* SearchViewModelTests.swift */; };
+		4533476E2873C7F2007C4F33 /* SearchViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4533476D2873C7F2007C4F33 /* SearchViewModel.swift */; };
 		45C235D62872279500D7AA6A /* FeedViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45C235D52872279500D7AA6A /* FeedViewModelTests.swift */; };
 		45C235D82872282400D7AA6A /* FeedViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45C235D72872282400D7AA6A /* FeedViewModel.swift */; };
 		45C235DB2872285900D7AA6A /* State.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45C235DA2872285900D7AA6A /* State.swift */; };
@@ -71,6 +73,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		4533476B2873C6B0007C4F33 /* SearchViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewModelTests.swift; sourceTree = "<group>"; };
+		4533476D2873C7F2007C4F33 /* SearchViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewModel.swift; sourceTree = "<group>"; };
 		45C235D52872279500D7AA6A /* FeedViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedViewModelTests.swift; sourceTree = "<group>"; };
 		45C235D72872282400D7AA6A /* FeedViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedViewModel.swift; sourceTree = "<group>"; };
 		45C235DA2872285900D7AA6A /* State.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = State.swift; sourceTree = "<group>"; };
@@ -220,6 +224,7 @@
 			isa = PBXGroup;
 			children = (
 				45C235FD28724A4100D7AA6A /* SearchViewControllerTest.swift */,
+				4533476B2873C6B0007C4F33 /* SearchViewModelTests.swift */,
 			);
 			path = Search;
 			sourceTree = "<group>";
@@ -228,6 +233,7 @@
 			isa = PBXGroup;
 			children = (
 				45C2360028724A8F00D7AA6A /* SearchViewController.swift */,
+				4533476D2873C7F2007C4F33 /* SearchViewModel.swift */,
 			);
 			path = Search;
 			sourceTree = "<group>";
@@ -536,6 +542,7 @@
 				45C235FB2872494F00D7AA6A /* SearchCoordinator.swift in Sources */,
 				45C235DE287228C400D7AA6A /* TweetViewModel.swift in Sources */,
 				9A020923281882BF007B47CE /* Tweet.swift in Sources */,
+				4533476E2873C7F2007C4F33 /* SearchViewModel.swift in Sources */,
 				9A0208E3281881CF007B47CE /* AppDelegate.swift in Sources */,
 				45C235F7287246BF00D7AA6A /* FeedCoordinator.swift in Sources */,
 				45D4C25528593A9600023791 /* TweetCell.swift in Sources */,
@@ -563,6 +570,7 @@
 				9A020946281882D9007B47CE /* StaticFuncsTests.swift in Sources */,
 				9A020941281882D9007B47CE /* UserModelTests.swift in Sources */,
 				9A02093E281882D9007B47CE /* MainCoordinatorTests.swift in Sources */,
+				4533476C2873C6B0007C4F33 /* SearchViewModelTests.swift in Sources */,
 				45C235FE28724A4100D7AA6A /* SearchViewControllerTest.swift in Sources */,
 				45D4C2532859382400023791 /* TweetCellTest.swift in Sources */,
 			);

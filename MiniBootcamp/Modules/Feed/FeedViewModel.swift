@@ -20,9 +20,7 @@ final class FeedViewModel {
         api.load(.timeline) { result in
             switch result {
             case .success(let tweets):
-                for tweet in tweets {
-                    self.timeline.append(TweetViewModel(tweet: tweet))
-                }
+                self.timeline = tweets.map { TweetViewModel(tweet: $0) }
                 self.state.value = .success
             case .failure(_):
                 self.state.value = .failure
