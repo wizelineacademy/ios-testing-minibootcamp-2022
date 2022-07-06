@@ -25,4 +25,8 @@ class MainCoordinator: Coordinator {
   func composeTweet() {
     rootViewController.pushViewController(viewControllerFactory.composeTweetViewController(), animated: true)
   }
+
+  func getUserProfile() {
+    rootViewController.pushViewController(viewControllerFactory.getUserProfile(), animated: true)
+  }
 }

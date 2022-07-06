@@ -23,6 +23,14 @@
 		34B1C013286BAE7300AF8F7A /* FakeSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34B1C012286BAE7300AF8F7A /* FakeSession.swift */; };
 		34B1C015286C0A2F00AF8F7A /* TweetState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34B1C014286C0A2F00AF8F7A /* TweetState.swift */; };
 		34B1C017286C0A5E00AF8F7A /* TweetViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34B1C016286C0A5E00AF8F7A /* TweetViewModel.swift */; };
+		34C1EDF42873E5D7003FDD07 /* UserProfileMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34C1EDF32873E5D7003FDD07 /* UserProfileMock.swift */; };
+		34CB8CEC28750F58000C8510 /* UserPrfileAPITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34CB8CEB28750F58000C8510 /* UserPrfileAPITests.swift */; };
+		34CB8CF028752952000C8510 /* CoordinatorStub.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34CB8CEF28752952000C8510 /* CoordinatorStub.swift */; };
+		34D6FB3A2873A3B8004DC4D7 /* UserProfileViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34D6FB392873A3B8004DC4D7 /* UserProfileViewControllerTests.swift */; };
+		34D6FB3C2873A491004DC4D7 /* UserProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34D6FB3B2873A491004DC4D7 /* UserProfileViewController.swift */; };
+		34D6FB3E2873A5E4004DC4D7 /* UserProfileViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34D6FB3D2873A5E4004DC4D7 /* UserProfileViewModelTests.swift */; };
+		34D6FB402873A641004DC4D7 /* UserProfileViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34D6FB3F2873A641004DC4D7 /* UserProfileViewModel.swift */; };
+		34D6FB432873D522004DC4D7 /* UserProfileAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34D6FB422873D522004DC4D7 /* UserProfileAPI.swift */; };
 		34FC7E69286FAB2B004F2906 /* ComposeTweetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34FC7E68286FAB27004F2906 /* ComposeTweetViewController.swift */; };
 		34FE727A286FD81A0037976C /* ComposeTweetViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34FE7279286FD81A0037976C /* ComposeTweetViewControllerTests.swift */; };
 		9A0208E3281881CF007B47CE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A0208E2281881CF007B47CE /* AppDelegate.swift */; };
@@ -83,6 +91,14 @@
 		34B1C012286BAE7300AF8F7A /* FakeSession.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FakeSession.swift; sourceTree = "<group>"; };
 		34B1C014286C0A2F00AF8F7A /* TweetState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TweetState.swift; sourceTree = "<group>"; };
 		34B1C016286C0A5E00AF8F7A /* TweetViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TweetViewModel.swift; sourceTree = "<group>"; };
+		34C1EDF32873E5D7003FDD07 /* UserProfileMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfileMock.swift; sourceTree = "<group>"; };
+		34CB8CEB28750F58000C8510 /* UserPrfileAPITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserPrfileAPITests.swift; sourceTree = "<group>"; };
+		34CB8CEF28752952000C8510 /* CoordinatorStub.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoordinatorStub.swift; sourceTree = "<group>"; };
+		34D6FB392873A3B8004DC4D7 /* UserProfileViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfileViewControllerTests.swift; sourceTree = "<group>"; };
+		34D6FB3B2873A491004DC4D7 /* UserProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfileViewController.swift; sourceTree = "<group>"; };
+		34D6FB3D2873A5E4004DC4D7 /* UserProfileViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfileViewModelTests.swift; sourceTree = "<group>"; };
+		34D6FB3F2873A641004DC4D7 /* UserProfileViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfileViewModel.swift; sourceTree = "<group>"; };
+		34D6FB422873D522004DC4D7 /* UserProfileAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfileAPI.swift; sourceTree = "<group>"; };
 		34FC7E68286FAB27004F2906 /* ComposeTweetViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComposeTweetViewController.swift; sourceTree = "<group>"; };
 		34FE7279286FD81A0037976C /* ComposeTweetViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComposeTweetViewControllerTests.swift; sourceTree = "<group>"; };
 		9A0208DF281881CF007B47CE /* MiniBootcamp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MiniBootcamp.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -152,6 +168,7 @@
 				34B1C012286BAE7300AF8F7A /* FakeSession.swift */,
 				3471570E28627D6300FFE632 /* TweetTimelineAPITests.swift */,
 				34425A862871504600A438E7 /* PostTweetAPITests.swift */,
+				34CB8CEB28750F58000C8510 /* UserPrfileAPITests.swift */,
 			);
 			path = Networking;
 			sourceTree = "<group>";
@@ -168,8 +185,35 @@
 			children = (
 				34B1C00D286BAC9C00AF8F7A /* FeedViewModelTests.swift */,
 				34425A882872065900A438E7 /* ComposeTweetViewModelTests.swift */,
+				34D6FB3D2873A5E4004DC4D7 /* UserProfileViewModelTests.swift */,
 			);
 			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		34CB8CEE28752937000C8510 /* Stubs */ = {
+			isa = PBXGroup;
+			children = (
+				34CB8CEF28752952000C8510 /* CoordinatorStub.swift */,
+			);
+			path = Stubs;
+			sourceTree = "<group>";
+		};
+		34D6FB382873A392004DC4D7 /* UserProfile */ = {
+			isa = PBXGroup;
+			children = (
+				34D6FB3B2873A491004DC4D7 /* UserProfileViewController.swift */,
+				34D6FB3F2873A641004DC4D7 /* UserProfileViewModel.swift */,
+			);
+			path = UserProfile;
+			sourceTree = "<group>";
+		};
+		34D6FB412873C559004DC4D7 /* Mocks */ = {
+			isa = PBXGroup;
+			children = (
+				34715710286286A900FFE632 /* TweetMock.swift */,
+				34C1EDF32873E5D7003FDD07 /* UserProfileMock.swift */,
+			);
+			path = Mocks;
 			sourceTree = "<group>";
 		};
 		34FC7E67286FAA9D004F2906 /* ComposeTweet */ = {
@@ -205,6 +249,7 @@
 			children = (
 				9A0208E2281881CF007B47CE /* AppDelegate.swift */,
 				9A0208E4281881CF007B47CE /* SceneDelegate.swift */,
+				3408C0CF28525268000ACABA /* Constants */,
 				9A020915281882BE007B47CE /* Composition */,
 				9A020912281882BE007B47CE /* Models */,
 				9A02091D281882BF007B47CE /* Modules */,
@@ -256,9 +301,10 @@
 		9A02091A281882BE007B47CE /* Networking */ = {
 			isa = PBXGroup;
 			children = (
+				9A02091C281882BE007B47CE /* Endpoint.swift */,
 				9A02091B281882BE007B47CE /* TweetTimelineAPI.swift */,
 				34425A842871499700A438E7 /* PostTweetAPI.swift */,
-				9A02091C281882BE007B47CE /* Endpoint.swift */,
+				34D6FB422873D522004DC4D7 /* UserProfileAPI.swift */,
 			);
 			path = Networking;
 			sourceTree = "<group>";
@@ -266,7 +312,7 @@
 		9A02091D281882BF007B47CE /* Modules */ = {
 			isa = PBXGroup;
 			children = (
-				3408C0CF28525268000ACABA /* Constants */,
+				34D6FB382873A392004DC4D7 /* UserProfile */,
 				9A02091E281882BF007B47CE /* Feed */,
 				34FC7E67286FAA9D004F2906 /* ComposeTweet */,
 			);
@@ -296,10 +342,12 @@
 		9A02092E281882D9007B47CE /* Module Tests */ = {
 			isa = PBXGroup;
 			children = (
+				34CB8CEE28752937000C8510 /* Stubs */,
+				34D6FB412873C559004DC4D7 /* Mocks */,
 				9A02092F281882D9007B47CE /* FeedViewControllerTests.swift */,
 				9A31C4FB2859382D00BCEFD5 /* TweetCellTests.swift */,
-				34715710286286A900FFE632 /* TweetMock.swift */,
 				34FE7279286FD81A0037976C /* ComposeTweetViewControllerTests.swift */,
+				34D6FB392873A3B8004DC4D7 /* UserProfileViewControllerTests.swift */,
 			);
 			path = "Module Tests";
 			sourceTree = "<group>";
@@ -452,6 +500,7 @@
 			files = (
 				9A020928281882BF007B47CE /* Coordinator.swift in Sources */,
 				34791B42285AF0FC00EB56D5 /* Wrappers.swift in Sources */,
+				34D6FB432873D522004DC4D7 /* UserProfileAPI.swift in Sources */,
 				9AAF3B6B2822F7F300A679CA /* Observer.swift in Sources */,
 				34610ABF28710B45007B2682 /* ComposeTweetViewModel.swift in Sources */,
 				3408C0D12852527D000ACABA /* FeedConstants.swift in Sources */,
@@ -466,6 +515,8 @@
 				9A020925281882BF007B47CE /* iOSViewControllerFactory.swift in Sources */,
 				34B1C011286BACFC00AF8F7A /* FeedViewModel.swift in Sources */,
 				9A020929281882BF007B47CE /* TweetTimelineAPI.swift in Sources */,
+				34D6FB3C2873A491004DC4D7 /* UserProfileViewController.swift in Sources */,
+				34D6FB402873A641004DC4D7 /* UserProfileViewModel.swift in Sources */,
 				34425A852871499700A438E7 /* PostTweetAPI.swift in Sources */,
 				9AD21A7B281AF3BE00A33F05 /* UIViewExtensions.swift in Sources */,
 				9A02092B281882BF007B47CE /* FeedViewController.swift in Sources */,
@@ -483,9 +534,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				34C1EDF42873E5D7003FDD07 /* UserProfileMock.swift in Sources */,
 				34715711286286A900FFE632 /* TweetMock.swift in Sources */,
 				34FE727A286FD81A0037976C /* ComposeTweetViewControllerTests.swift in Sources */,
 				34425A892872065900A438E7 /* ComposeTweetViewModelTests.swift in Sources */,
+				34D6FB3E2873A5E4004DC4D7 /* UserProfileViewModelTests.swift in Sources */,
 				9A02093F281882D9007B47CE /* iOSViewControllerFactoryTests.swift in Sources */,
 				34B1C00E286BAC9C00AF8F7A /* FeedViewModelTests.swift in Sources */,
 				9AAF3B692822F7D900A679CA /* ObserverTests.swift in Sources */,
@@ -494,9 +547,12 @@
 				9A02093D281882D9007B47CE /* FeedViewControllerTests.swift in Sources */,
 				34791B44285BDC1600EB56D5 /* WrapperTests.swift in Sources */,
 				34B1C013286BAE7300AF8F7A /* FakeSession.swift in Sources */,
+				34D6FB3A2873A3B8004DC4D7 /* UserProfileViewControllerTests.swift in Sources */,
 				9A020946281882D9007B47CE /* StaticFuncsTests.swift in Sources */,
+				34CB8CF028752952000C8510 /* CoordinatorStub.swift in Sources */,
 				34425A872871504600A438E7 /* PostTweetAPITests.swift in Sources */,
 				9A020941281882D9007B47CE /* UserModelTests.swift in Sources */,
+				34CB8CEC28750F58000C8510 /* UserPrfileAPITests.swift in Sources */,
 				9A02093E281882D9007B47CE /* MainCoordinatorTests.swift in Sources */,
 				3471570F28627D6300FFE632 /* TweetTimelineAPITests.swift in Sources */,
 			);

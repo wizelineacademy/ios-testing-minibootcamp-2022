@@ -17,5 +17,9 @@ class iOSViewControllerFactory: ViewControllerFactory {
   func composeTweetViewController() -> UIViewController {
     ComposeTweetViewController()
   }
+
+  func getUserProfile() -> UIViewController {
+    UserProfileViewController()
+  }
   
 }

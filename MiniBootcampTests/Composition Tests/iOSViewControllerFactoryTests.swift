@@ -33,8 +33,14 @@ class iOSViewControllerFactoryTests: XCTestCase {
   func test_composeTweetViewController_isComposeViewControllerType() {
     // Given
     let composeTweetVC = sut.composeTweetViewController() as? ComposeTweetViewController
-
     // Then
     XCTAssertNotNil(composeTweetVC)
+  }
+
+  func test_getUserProfileViewController_isUserProfileViewControllerType() {
+    // Given
+    let userProfile = sut.getUserProfile() as? UserProfileViewController
+    // Then
+    XCTAssertNotNil(userProfile)
   }
 }

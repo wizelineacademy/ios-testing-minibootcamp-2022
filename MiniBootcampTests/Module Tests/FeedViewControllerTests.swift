@@ -78,6 +78,37 @@ class FeedViewControllerTests: XCTestCase {
     }
   }
 
+  func test_addTappedButton_callsComposeTweet() {
+    // Given
+    let expectedCall = "composeTweet()"
+    let coordinatorStub: CoordinatorStub = CoordinatorStub()
+    sut.coordinator = coordinatorStub
+    // When
+    sut.addTapped()
+    // Then
+    print(coordinatorStub.calls.contains(expectedCall))
+  }
+
+  func test_showProfileButton_callsUserProfile() {
+    // Given
+    let expectedCall = "getUserProfile()"
+    let coordinatorStub: CoordinatorStub = CoordinatorStub()
+    sut.coordinator = coordinatorStub
+    // When
+    sut.showProfile()
+    // Then
+    print(coordinatorStub.calls.contains(expectedCall))
+  }
+
+  func testSomething() {
+    var session = FakeSession()
+    session.error = TweetAPIError.noData
+    sut.viewModel.api = TweetTimelineAPI(session: session)
+    sut.viewDidLoad()
+
+    print("SOME")
+  }
+
   // MARK: - Profile Unit Tests
   func test_showProfileButton_isNotNil() throws {
     // Given

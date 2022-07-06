@@ -22,9 +22,12 @@ class MainCoordinatorTests: XCTestCase {
   }
 
   func test_whenStarts_rootVCIsFeedViewController() {
+    // Given
     let sut = makeSUT(nv: UINavigationController(), factory: StubFactory())
+    // When
     sut.start()
     let feedVC = sut.rootViewController.viewControllers[0] as? FeedViewController
+    // Then
     XCTAssertNotNil(feedVC)
   }
 
@@ -34,7 +37,18 @@ class MainCoordinatorTests: XCTestCase {
     // When
     sut.composeTweet()
     let composeTweetVC = sut.rootViewController.viewControllers[0] as? ComposeTweetViewController
+    // Then
     XCTAssertNotNil(composeTweetVC)
+  }
+
+  func test_getUserProfile_launchesUserProfileViewController() {
+    // Given
+    let sut = makeSUT(nv: UINavigationController(), factory: StubFactory())
+    // When
+    sut.getUserProfile()
+    let userProfileVC = sut.rootViewController.viewControllers[0] as? UserProfileViewController
+    // Then
+    XCTAssertNotNil(userProfileVC)
   }
 
   // MARK: - Helper Methods
@@ -51,5 +65,9 @@ private class StubFactory: ViewControllerFactory {
 
   func composeTweetViewController() -> UIViewController {
     return ComposeTweetViewController()
+  }
+
+  func getUserProfile() -> UIViewController {
+    return UserProfileViewController()
   }
 }

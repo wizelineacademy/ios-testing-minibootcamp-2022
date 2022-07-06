@@ -75,7 +75,9 @@ class FeedViewController: UIViewController {
     coordinator?.composeTweet()
   }
 
-  @objc func showProfile() {}
+  @objc func showProfile() {
+    coordinator?.getUserProfile()
+  }
 }
 
 extension FeedViewController: UITableViewDelegate {

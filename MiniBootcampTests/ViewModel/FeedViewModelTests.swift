@@ -55,7 +55,7 @@ class FeedViewModelTests: XCTestCase {
     XCTAssertTrue(changeState)
   }
 
-  func testFetchTweet_WhenFetchingUninished_ReturnsFailureState() throws {
+  func testFetchTweet_WhenFetchingUnfinished_ReturnsFailureState() throws {
     // Given
     fakeSession.data = try TweetMock().tweetData()
     var failureState: Bool = false
@@ -74,25 +74,6 @@ class FeedViewModelTests: XCTestCase {
     // Then
     wait(for: [expectation], timeout: 3.0)
     XCTAssertTrue(failureState)
-  }
-
-  func testFetchedTweetTimeline_WhenSuccessfulState() throws {
-    // Given
-    fakeSession.data = try TweetMock().tweetsData()
-    let expectation = expectation(description: "Fetched tweet timeline")
-    sut.state.bind { state in
-      switch state {
-      case .success:
-        expectation.fulfill()
-      default:
-        break
-      }
-    }
-    // When
-    sut.fetchTweetTimeLine()
-    // Then
-    wait(for: [expectation], timeout: 3.0)
-    XCTAssertTrue(sut.timeline.count > 0)
   }
 }
 

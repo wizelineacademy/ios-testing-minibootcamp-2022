@@ -12,4 +12,5 @@ protocol Coordinator {
   var rootViewController: UINavigationController { get set }
   func start()
   func composeTweet()
+  func getUserProfile()
 }

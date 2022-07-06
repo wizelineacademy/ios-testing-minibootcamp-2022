@@ -11,4 +11,5 @@ import UIKit
 protocol ViewControllerFactory {
   func feedViewController() -> UIViewController
   func composeTweetViewController() -> UIViewController
+  func getUserProfile() -> UIViewController
 }
