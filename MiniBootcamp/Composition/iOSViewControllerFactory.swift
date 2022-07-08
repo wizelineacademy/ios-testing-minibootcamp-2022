@@ -19,7 +19,11 @@ class iOSViewControllerFactory: ViewControllerFactory {
   }
 
   func getUserProfile() -> UIViewController {
-    UserProfileViewController()
+    let api = UserProfileAPI(session: .shared)
+    let viewModel = UserProfileViewModel(api: api)
+    let view = UserProfileViewController()
+    view.viewModel = viewModel
+    return view
   }
   
 }

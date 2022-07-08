@@ -15,6 +15,7 @@ class FeedViewController: UIViewController {
   override func viewDidLoad() {
     super.viewDidLoad()
     view.backgroundColor = .white
+    view.showBlurLoader()
     setupTableView()
     viewModel.fetchTweetTimeLine()
     setNavigationBar()
@@ -25,11 +26,10 @@ class FeedViewController: UIViewController {
         guard let stateNotNil = state else { return }
         switch stateNotNil {
         case .loading:
-          print("loading")
+          self?.view.showBlurLoader()
         case .success:
-          // dismissLoader
+          self?.view.removeBluerLoader()
           self?.tableView.reloadData()
-          print("success")
         case .failure:
           print("failure")
         }

@@ -7,47 +7,95 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "D9E73C68-1F99-42B6-B8C9-9A15990A2D32"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "MiniBootcamp/Modules/UserProfile/UserProfileViewController.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "16"
-            endingLineNumber = "16"
-            landmarkName = "init(viewModel:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "79129405-109D-4166-8530-CE747809A8CC"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "MiniBootcamp/Modules/UserProfile/UserProfileViewController.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "32"
-            endingLineNumber = "32"
-            landmarkName = "setupLabel()"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "2F2B8A07-45E0-44FC-86DF-D00A81FEA401"
+            uuid = "33C42389-DBDE-4C6C-AFAE-DC5A80392834"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "MiniBootcamp/Modules/UserProfile/UserProfileViewModel.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "30"
-            endingLineNumber = "30"
+            startingLineNumber = "52"
+            endingLineNumber = "52"
+            landmarkName = "downloadImageData(from:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "C889C989-43E5-4E01-A751-EA0F5C420504"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "MiniBootcampTests/Module Tests/UserProfileViewControllerTests.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "93"
+            endingLineNumber = "93"
+            landmarkName = "testViewController_viewModelSendsFailure_showsAlert()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "C889C989-43E5-4E01-A751-EA0F5C420504 - a820da6f4a09fbc9"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "MiniBootcampTests.UserProfileViewControllerTests.testViewController_viewModelSendsFailure_showsAlert() throws -&gt; ()"
+                  moduleName = "MiniBootcampTests"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/heber.alvarez/Documents/GettingStarted/Academy/Wizeline/Bootcamp/ios-testing-minibootcamp-2022/MiniBootcampTests/Module%20Tests/UserProfileViewControllerTests.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "99"
+                  endingLineNumber = "99"
+                  offsetFromSymbolStart = "903">
+               </Location>
+               <Location
+                  uuid = "C889C989-43E5-4E01-A751-EA0F5C420504 - a820da6f4a09fbc9"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "MiniBootcampTests.UserProfileViewControllerTests.testViewController_viewModelSendsFailure_showsAlert() throws -&gt; ()"
+                  moduleName = "MiniBootcampTests"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/heber.alvarez/Documents/GettingStarted/Academy/Wizeline/Bootcamp/ios-testing-minibootcamp-2022/MiniBootcampTests/Module%20Tests/UserProfileViewControllerTests.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "99"
+                  endingLineNumber = "99"
+                  offsetFromSymbolStart = "493">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "7598AB14-DEDA-4E08-853D-AFC884B3E49D"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "MiniBootcamp/Modules/ComposeTweet/ComposeTweetViewModel.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "31"
+            endingLineNumber = "31"
+            landmarkName = "postTweet()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "090DF6DF-B17A-4208-8908-5B261DCA72E8"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "MiniBootcamp/Modules/UserProfile/UserProfileViewModel.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "41"
+            endingLineNumber = "41"
             landmarkName = "onReceive(_:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -55,143 +103,81 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "2558D5BB-AA60-424C-B292-953B447EA88C"
+            uuid = "CBC72647-4883-4B17-BE43-23640E854E5F"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "MiniBootcamp/Modules/UserProfile/UserProfileViewModel.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "36"
+            endingLineNumber = "36"
+            landmarkName = "onReceive(_:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "C27DB97E-B6E0-4EFB-867B-DB3DF52F78A3"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "MiniBootcamp/Modules/UserProfile/UserProfileViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "29"
-            endingLineNumber = "29"
-            landmarkName = "setupLabel()"
+            startingLineNumber = "110"
+            endingLineNumber = "110"
+            landmarkName = "getUserProfile()"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "08884543-782A-4EF2-9634-25FCDC195952"
+            uuid = "6A9F1DDE-D79B-482B-9CFB-87475AB9EE6F"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "MiniBootcampTests/Module Tests/UserProfileViewControllerTests.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "56"
-            endingLineNumber = "56"
-            landmarkName = "testViewController_WhenDidLoad_ReloadsView()"
+            startingLineNumber = "48"
+            endingLineNumber = "48"
+            landmarkName = "testViewController_WhenDidLoad_StateIsLoading()"
             landmarkType = "7">
-            <Locations>
-               <Location
-                  uuid = "08884543-782A-4EF2-9634-25FCDC195952 - 2fa029fd02c6ee7f"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "MiniBootcampTests.UserProfileViewControllerTests.testViewController_WhenDidLoad_ReloadsView() throws -&gt; ()"
-                  moduleName = "MiniBootcampTests"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/heber.alvarez/Documents/GettingStarted/Academy/Wizeline/Bootcamp/ios-testing-minibootcamp-2022/MiniBootcampTests/Module%20Tests/UserProfileViewControllerTests.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "55"
-                  endingLineNumber = "55"
-                  offsetFromSymbolStart = "722">
-               </Location>
-               <Location
-                  uuid = "08884543-782A-4EF2-9634-25FCDC195952 - 2fa029fd02c6ee5e"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "MiniBootcampTests.UserProfileViewControllerTests.testViewController_WhenDidLoad_ReloadsView() throws -&gt; ()"
-                  moduleName = "MiniBootcampTests"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/heber.alvarez/Documents/GettingStarted/Academy/Wizeline/Bootcamp/ios-testing-minibootcamp-2022/MiniBootcampTests/Module%20Tests/UserProfileViewControllerTests.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "56"
-                  endingLineNumber = "56"
-                  offsetFromSymbolStart = "824">
-               </Location>
-               <Location
-                  uuid = "08884543-782A-4EF2-9634-25FCDC195952 - 2fa029fd02c6ee5e"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "MiniBootcampTests.UserProfileViewControllerTests.testViewController_WhenDidLoad_ReloadsView() throws -&gt; ()"
-                  moduleName = "MiniBootcampTests"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/heber.alvarez/Documents/GettingStarted/Academy/Wizeline/Bootcamp/ios-testing-minibootcamp-2022/MiniBootcampTests/Module%20Tests/UserProfileViewControllerTests.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "56"
-                  endingLineNumber = "56"
-                  offsetFromSymbolStart = "834">
-               </Location>
-            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "DF1C5D9F-B01B-4362-B0AF-1BF491DF4791"
+            uuid = "084F4DC2-08BA-4604-96BB-C9B5D381DA14"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "MiniBootcampTests/Module Tests/UserProfileViewControllerTests.swift"
+            filePath = "MiniBootcamp/Modules/UserProfile/UserProfileViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "52"
-            endingLineNumber = "52"
-            landmarkName = "testViewController_WhenDidLoad_ReloadsView()"
+            startingLineNumber = "54"
+            endingLineNumber = "54"
+            landmarkName = "viewDidLoad()"
             landmarkType = "7">
-            <Locations>
-               <Location
-                  uuid = "DF1C5D9F-B01B-4362-B0AF-1BF491DF4791 - 2fa029fd02c6eff3"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "MiniBootcampTests.UserProfileViewControllerTests.testViewController_WhenDidLoad_ReloadsView() throws -&gt; ()"
-                  moduleName = "MiniBootcampTests"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/heber.alvarez/Documents/GettingStarted/Academy/Wizeline/Bootcamp/ios-testing-minibootcamp-2022/MiniBootcampTests/Module%20Tests/UserProfileViewControllerTests.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "51"
-                  endingLineNumber = "51"
-                  offsetFromSymbolStart = "430">
-               </Location>
-               <Location
-                  uuid = "DF1C5D9F-B01B-4362-B0AF-1BF491DF4791 - 2fa029fd02c6eff3"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "MiniBootcampTests.UserProfileViewControllerTests.testViewController_WhenDidLoad_ReloadsView() throws -&gt; ()"
-                  moduleName = "MiniBootcampTests"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/heber.alvarez/Documents/GettingStarted/Academy/Wizeline/Bootcamp/ios-testing-minibootcamp-2022/MiniBootcampTests/Module%20Tests/UserProfileViewControllerTests.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "51"
-                  endingLineNumber = "51"
-                  offsetFromSymbolStart = "423">
-               </Location>
-               <Location
-                  uuid = "DF1C5D9F-B01B-4362-B0AF-1BF491DF4791 - 2fa029fd02c6efd2"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "MiniBootcampTests.UserProfileViewControllerTests.testViewController_WhenDidLoad_ReloadsView() throws -&gt; ()"
-                  moduleName = "MiniBootcampTests"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/heber.alvarez/Documents/GettingStarted/Academy/Wizeline/Bootcamp/ios-testing-minibootcamp-2022/MiniBootcampTests/Module%20Tests/UserProfileViewControllerTests.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "52"
-                  endingLineNumber = "52"
-                  offsetFromSymbolStart = "496">
-               </Location>
-            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "22B4C0F6-121A-4759-8457-B2E85746E166"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "MiniBootcamp/Modules/UserProfile/UserProfileViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "105"
+            endingLineNumber = "105"
+            landmarkName = "getUserProfile()"
+            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

@@ -36,7 +36,7 @@ class FeedViewControllerTests: XCTestCase {
   }
 
   func testViewControllerHasTableViewAsSubview() {
-    XCTAssertEqual(sut.view.subviews.count, 1)
+    XCTAssert(sut.view.subviews.count > 0)
   }
 
   func testViewController_WhenDidLoad_StateIsLoading() {
@@ -46,12 +46,6 @@ class FeedViewControllerTests: XCTestCase {
 
     // Then
     XCTAssertEqual(sut.viewModel.state.value, .loading)
-  }
-
-  func testTableViewCell_cellIsTweetCell() {
-    // TODO: - Add TDD
-//    let cell = sut.tableView.dataSource?.tableView(sut.tableView, cellForRowAt: IndexPath(row: 0, section: 0)) as? TweetCell
-//    XCTAssertNotNil(cell)
   }
 
   func testAddButton_isNotNil() throws {

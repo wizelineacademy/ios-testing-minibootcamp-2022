@@ -22,13 +22,4 @@ class TweetMock {
     let data = try Data(contentsOf: URL(fileURLWithPath: path))
     return data
   }
-
-  // TODO: complete this methods
-  func tweetModel() -> [Tweet] {
-    return []
-  }
-
-//  func singleTweetModel() -> Tweet {
-//    return Tweet(from: <#Decoder#>)
-//  }
 }

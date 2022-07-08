@@ -28,7 +28,7 @@ class MockDataTask: URLSessionDataTask {
   }
 
   override func resume() {
-    DispatchQueue.global().asyncAfter(deadline: DispatchTime.now() + 1.0) {
+    DispatchQueue.global().asyncAfter(deadline: DispatchTime.now()) {
       self.closure()
     }
   }

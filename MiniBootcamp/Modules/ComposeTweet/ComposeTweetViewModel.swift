@@ -15,6 +15,10 @@ class ComposeTweetViewModel {
     self.api = api
   }
 
+  func createAlertModel(error: Error) {
+
+  }
+
   func postTweet() {
     state.value = .loading
     api.send(.postTweet) { result in
@@ -24,8 +28,14 @@ class ComposeTweetViewModel {
         print(tweets)
       case .failure(let error):
         self.state.value = .failure
-        print(error)
+        self.createAlertModel(error: error)
       }
     }
   }
+}
+
+struct AlertModel {
+  let title: String
+  let message: String
+  let buttonTitle: String
 }
