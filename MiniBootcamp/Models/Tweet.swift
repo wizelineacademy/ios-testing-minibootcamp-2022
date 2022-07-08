@@ -27,5 +27,4 @@ extension Tweet {
         case favs = "favorite_count"
         case retweets = "retweet_count"
     }
-    
 }

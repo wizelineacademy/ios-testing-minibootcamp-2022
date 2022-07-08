@@ -8,14 +8,14 @@
 import Foundation
 
 enum TweetAPIError: Error {
-    case noData
-    case response
-    case parsingData
+  case noData
+  case response
+  case parsingData
+  case internalServer
 }
 
 struct TweetTimelineAPI {
-    
-    let session: URLSession
+  let session: URLSession
     
     func load(_ endpoint: Endpoint, completion: @escaping (Result<[Tweet], Error>) -> ()) {
         

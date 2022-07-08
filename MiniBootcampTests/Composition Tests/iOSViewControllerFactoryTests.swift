@@ -9,12 +9,38 @@ import XCTest
 @testable import MiniBootcamp
 
 class iOSViewControllerFactoryTests: XCTestCase {
-    
-    func test_feedViewController_isFeedViewControllerType() {
-        
-        let sut = iOSViewControllerFactory()
-        let feedVC = sut.feedViewController() as? FeedViewController
-        XCTAssertNotNil(feedVC)
-        
-    }
+
+  var sut: iOSViewControllerFactory!
+
+  override func setUp() {
+    super.setUp()
+    sut = iOSViewControllerFactory()
+  }
+
+  override func tearDown() {
+    sut = nil
+    super.tearDown()
+  }
+
+  func test_feedViewController_isFeedViewControllerType() {
+    // Given
+    let feedVC = sut.feedViewController() as? FeedViewController
+    // Then
+    XCTAssertNotNil(feedVC)
+
+  }
+
+  func test_composeTweetViewController_isComposeViewControllerType() {
+    // Given
+    let composeTweetVC = sut.composeTweetViewController() as? ComposeTweetViewController
+    // Then
+    XCTAssertNotNil(composeTweetVC)
+  }
+
+  func test_getUserProfileViewController_isUserProfileViewControllerType() {
+    // Given
+    let userProfile = sut.getUserProfile() as? UserProfileViewController
+    // Then
+    XCTAssertNotNil(userProfile)
+  }
 }

@@ -9,6 +9,8 @@ import Foundation
 import UIKit
 
 protocol Coordinator {
-    var rootViewController: UINavigationController { get set }
-    func start()
+  var rootViewController: UINavigationController { get set }
+  func start()
+  func composeTweet()
+  func getUserProfile()
 }

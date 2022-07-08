@@ -9,17 +9,24 @@ import Foundation
 import UIKit
 
 class MainCoordinator: Coordinator {
-    
-    var rootViewController: UINavigationController
-    var viewControllerFactory: ViewControllerFactory
-    
-    init(rootViewController: UINavigationController, viewControllerFactory: ViewControllerFactory) {
-        self.rootViewController = rootViewController
-        self.viewControllerFactory = viewControllerFactory
-    }
-    
-    func start() {
-        rootViewController.pushViewController(viewControllerFactory.feedViewController(), animated: false)
-    }
-    
+
+  var rootViewController: UINavigationController
+  var viewControllerFactory: ViewControllerFactory
+
+  init(rootViewController: UINavigationController, viewControllerFactory: ViewControllerFactory) {
+    self.rootViewController = rootViewController
+    self.viewControllerFactory = viewControllerFactory
+  }
+
+  func start() {
+    rootViewController.pushViewController(viewControllerFactory.feedViewController(), animated: false)
+  }
+
+  func composeTweet() {
+    rootViewController.pushViewController(viewControllerFactory.composeTweetViewController(), animated: true)
+  }
+
+  func getUserProfile() {
+    rootViewController.pushViewController(viewControllerFactory.getUserProfile(), animated: true)
+  }
 }
