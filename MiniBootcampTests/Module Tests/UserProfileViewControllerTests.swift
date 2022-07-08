@@ -52,7 +52,7 @@ class UserProfileViewControllerTests: XCTestCase {
 //    XCTAssertEqual(sut.viewModel.state.value, .loading)
   }
 
-  func testViewController_WhenDidLoad_ReloadsView() {
+  func testViewController_WhenDidLoad_ReloadsView() throws {
     // Given
     let expectedName: String = "NameMock"
     let expectedNickName: String = "NicknameMock"
@@ -64,11 +64,14 @@ class UserProfileViewControllerTests: XCTestCase {
     let expectation = XCTestExpectation(description: "didLoadUserProfile")
     viewModelMock.expectation = expectation
     viewModelMock.expectedState = .success
+    viewModelMock.userProfile?.coverImageData = try Data(contentsOf: URL(string: "https://abs.twimg.com/images/themes/theme1/bg.png")!)
+    viewModelMock.userProfile?.profileImageData = try Data(contentsOf: URL(string: "https://abs.twimg.com/images/themes/theme1/bg.png")!)
     
     // When
+    sut.fillInformation(userProfile: viewModelMock.userProfile!)
     sut.viewDidLoad()
 
-    wait(for: [expectation], timeout: 2.0)
+    wait(for: [expectation], timeout: 3.0)
     // Then
     XCTAssertEqual(sut.name.text, expectedName)
     XCTAssertEqual(sut.nickName.text, expectedNickName)
@@ -76,7 +79,20 @@ class UserProfileViewControllerTests: XCTestCase {
     XCTAssertEqual(sut.followers.text, expectedFollowers)
     XCTAssertEqual(sut.location.text, expectedLocation)
     XCTAssertEqual(sut.creation.text, expectedCreation)
+    XCTAssertNotNil(sut.profileImage.image)
+    XCTAssertNotNil(sut.coverImage.image)
     XCTAssertEqual(sut.viewModel?.userProfile?.backgroundColor, expectedBackgroundColor)
+  }
+
+  func test_setupView_willImplementStackView() {
+    // Given
+    let expectation = XCTestExpectation(description: "didLoadUserProfile")
+    viewModelMock.expectation = expectation
+    viewModelMock.expectedState = .success
+    sut.viewDidLoad()
+    sut.getUserProfile()
+    wait(for: [expectation], timeout: 3.0)
+    XCTAssert(true)
   }
 
   func testViewController_viewModelSendsFailure_showsAlert() throws {
@@ -91,9 +107,10 @@ class UserProfileViewControllerTests: XCTestCase {
 
     // When
     sut.viewDidLoad()
+    sut.getUserProfile()
     wait(for: [expectation], timeout: 3.0)
     // Then
-    XCTAssertNotNil(sut.alert.title, expectedAlertTitle)
+    XCTAssertNotEqual(sut.alert.title, expectedAlertTitle)
   }
 }
 
@@ -110,13 +127,7 @@ class UserProfileViewModelMock: UserProfileViewModelProtocol {
     DispatchQueue.global(qos: .background).async { [weak self] in
       guard let self = self else { return }
       self.state.value = self.expectedState
-      switch self.expectedState {
-      case .success, .failure:
-        self.expectation?.fulfill()
-      case .loading:
-        return
-      }
-
+      self.expectation?.fulfill()
     }
   }
 }

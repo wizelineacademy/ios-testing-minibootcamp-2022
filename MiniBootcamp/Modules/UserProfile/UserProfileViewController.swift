@@ -36,6 +36,9 @@ class UserProfileViewController: UIViewController {
     $0.textColor = .darkGray
     $0.font = UIFont.normal(withSize: .content)
   }
+  @UsesLayout var coverImage: UIImageView = UIImageView()
+  @UsesLayout var profileImageContainer: UIImageView = UIImageView()
+  @UsesLayout var profileImage: UIImageView = UIImageView()
 
   convenience init(viewModel: UserProfileViewModelProtocol) {
     self.init()
@@ -55,61 +58,61 @@ class UserProfileViewController: UIViewController {
     }
   }
 
+  func fillInformation(userProfile: UserProfile) {
+    let followers: String = "Followers: \(userProfile.followers)"
+    view.backgroundColor = UIColor(hex: userProfile.backgroundColor)
+    stackView.backgroundColor = UIColor(hex: userProfile.backgroundColor)
+    name.text = userProfile.name
+    nickName.text = userProfile.nickname
+    userDescription.text = userProfile.description
+    location.text = userProfile.location
+    self.followers.text = followers
+    creation.text = userProfile.creation
+    guard let coverImageData = userProfile.coverImageData else { return }
+    coverImage.image = UIImage(data: coverImageData)
+    coverImage.heightAnchor.constraint(equalToConstant: view.frame.height * 1/4).isActive = true
+    guard let profileImageData: Data = userProfile.profileImageData else { return }
+    profileImage.image = UIImage(data: profileImageData)?.withRenderingMode(.automatic)
+    profileImage.sizeToFit()
+    profileImage.backgroundColor = .clear
+  }
+
+  func getUserProfile() {
+    viewModel?.state.bind { state in
+      guard let state: TweetState = state else { return }
+        switch state {
+        case .loading:
+          self.view.showBlurLoader()
+        case .failure:
+          self.showAlert()
+        case .success:
+          DispatchQueue.main.async {
+            self.setupView()
+          }
+      }
+    }
+  }
 
   private func setupView() {
     DispatchQueue.main.async { [weak self] in
       guard let selfView: UserProfileViewController = self,
-            let backgroundColorString: String = selfView.viewModel?.userProfile?.backgroundColor else { return }
-      selfView.view.backgroundColor = UIColor(hex: backgroundColorString)
-      selfView.name.text = selfView.viewModel?.userProfile?.name
-      selfView.nickName.text = selfView.viewModel?.userProfile?.nickname
-      selfView.userDescription.text = "\(selfView.viewModel?.userProfile?.description ?? "")"
-      selfView.location.text = "\(selfView.viewModel?.userProfile?.location ?? "")"
-      guard let followers: String = selfView.viewModel?.userProfile?.followers else { return }
-      selfView.followers.text = "Followers: \(followers)"
-      selfView.creation.text = "\(selfView.viewModel?.userProfile?.creation ?? "")"
-
-      @UsesLayout var coverImage: UIImageView = create {
-        guard let coverImageData: Data = selfView.viewModel?.userProfile?.coverImageData else { return }
-        $0.image = UIImage(data: coverImageData)
-        $0.heightAnchor.constraint(equalToConstant: selfView.view.frame.height * 1/3).isActive = true
-      }
-      @UsesLayout var profileImageContainer: UIImageView = UIImageView()
-      @UsesLayout var profileImage: UIImageView = create {
-        guard let profileImageData: Data = selfView.viewModel?.userProfile?.profileImageData else { return }
-        $0.image = UIImage(data: profileImageData)?.withRenderingMode(.automatic)
-        $0.sizeToFit()
-        $0.backgroundColor = .clear
-      }
+            let userProfile: UserProfile = selfView.viewModel?.userProfile else { return }
+      selfView.fillInformation(userProfile: userProfile)
 
       selfView.view.addSubview(selfView.stackView)
       selfView.stackView.anchor(top: selfView.view.topAnchor, leading: selfView.view.leadingAnchor, trailing: selfView.view.trailingAnchor, bottom: selfView.view.bottomAnchor, padding: UIEdgeInsets(top: 0, left: 8, bottom: 0, right: 8))
-      selfView.stackView.backgroundColor = UIColor(hex: backgroundColorString)
       selfView.stackView.distribution = .fill
       selfView.stackView.axis = .vertical
-      let subviews: [UIView] = [coverImage, profileImageContainer, selfView.name,
+      selfView.stackView.spacing = 8
+      let subviews: [UIView] = [selfView.coverImage, selfView.profileImageContainer, selfView.name,
                                 selfView.nickName, selfView.userDescription, selfView.location, selfView.followers, selfView.creation, UIView()]
       for subview in subviews {
         selfView.stackView.addArrangedSubview(subview)
       }
-      profileImageContainer.addSubview(profileImage)
-      profileImage.anchor(top: profileImageContainer.topAnchor, leading: nil, trailing: nil, bottom: profileImageContainer.bottomAnchor, size: CGSize(width: 128, height: 128))
+      selfView.profileImageContainer.addSubview(selfView.profileImage)
+      selfView.profileImage.anchor(top: selfView.profileImageContainer.topAnchor, leading: nil, trailing: nil, bottom: selfView.profileImageContainer.bottomAnchor, size: CGSize(width: 128, height: 128))
 
       selfView.view.removeBluerLoader()
-    }
-  }
-
-  private func getUserProfile() {
-    viewModel?.state.bind { [weak self] state in
-      guard let state: TweetState = state else { return }
-        switch state {
-        case .loading:
-          self?.view.showBlurLoader()
-        case .failure:
-          self?.showAlert()
-        case .success:
-          self?.setupView()
-      }
     }
   }
 
