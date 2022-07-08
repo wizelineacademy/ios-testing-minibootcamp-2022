@@ -36,36 +36,13 @@ class FeedViewControllerTests: XCTestCase {
     }
     
     func testViewControllerHasTableViewAsSubview() {
-        XCTAssertEqual(sut.view.subviews.count, 1)
-    }
-    
-    func testTableViewNumberOfRowsIsOne() {
-        
-        XCTAssertEqual(sut.tableView.dataSource?.tableView(sut.tableView, numberOfRowsInSection: 0), 5)
-        
-    }
-    
-    func testTableViewCell_cellIsTweetCell() {
-        
-        let cell = sut.tableView.dataSource?.tableView(sut.tableView, cellForRowAt: IndexPath(row: 0, section: 0)) as? TweetCell
-        
-        XCTAssertNotNil(cell)
-        
-    }
-    
-    override func tearDown() {
-        super.tearDown()
-        sut = nil
+        XCTAssertTrue(sut.view.subviews.count > 0)
     }
 
   func testTableViewInitialConfiguration() {
     XCTAssertFalse(sut.tableView.translatesAutoresizingMaskIntoConstraints)
     XCTAssertNotNil(sut.tableView.dataSource)
     XCTAssertNotNil(sut.tableView.delegate)
-  }
-
-  func testViewControllerHasTableViewAsSubview() {
-    XCTAssert(sut.view.subviews.count > 0)
   }
 
   func testViewController_WhenDidLoad_StateIsLoading() {

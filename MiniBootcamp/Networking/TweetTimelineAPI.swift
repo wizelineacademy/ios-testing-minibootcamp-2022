@@ -17,8 +17,6 @@ enum TweetAPIError: Error {
 struct TweetTimelineAPI {
   let session: URLSession
     
-    let session: URLSession
-    
     func load(_ endpoint: Endpoint, completion: @escaping (Result<[Tweet], Error>) -> ()) {
         
         let request = endpoint.request
