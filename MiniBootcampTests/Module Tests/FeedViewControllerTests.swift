@@ -28,6 +28,35 @@ class FeedViewControllerTests: XCTestCase {
     XCTAssertNotNil(sut.view?.backgroundColor)
     XCTAssertEqual(sut.view?.backgroundColor, .white)
     }
+    
+    func testTableView_initialConfiguration() {
+        XCTAssertFalse(sut.tableView.translatesAutoresizingMaskIntoConstraints)
+        XCTAssertNotNil(sut.tableView.dataSource)
+        XCTAssertNotNil(sut.tableView.delegate)
+    }
+    
+    func testViewControllerHasTableViewAsSubview() {
+        XCTAssertEqual(sut.view.subviews.count, 1)
+    }
+    
+    func testTableViewNumberOfRowsIsOne() {
+        
+        XCTAssertEqual(sut.tableView.dataSource?.tableView(sut.tableView, numberOfRowsInSection: 0), 5)
+        
+    }
+    
+    func testTableViewCell_cellIsTweetCell() {
+        
+        let cell = sut.tableView.dataSource?.tableView(sut.tableView, cellForRowAt: IndexPath(row: 0, section: 0)) as? TweetCell
+        
+        XCTAssertNotNil(cell)
+        
+    }
+    
+    override func tearDown() {
+        super.tearDown()
+        sut = nil
+    }
 
   func testTableViewInitialConfiguration() {
     XCTAssertFalse(sut.tableView.translatesAutoresizingMaskIntoConstraints)
