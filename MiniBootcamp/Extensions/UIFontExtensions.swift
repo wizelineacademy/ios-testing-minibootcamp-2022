@@ -13,6 +13,7 @@ extension UIFont {
         case name = 16
         case username = 13
         case content = 12
+        case date = 10
     }
     
     static func bold(withSize size: TweetCellSize) -> UIFont? {
@@ -22,4 +23,5 @@ extension UIFont {
     static func normal(withSize size: TweetCellSize) -> UIFont? {
         UIFont(name: "Helvetica", size: size.rawValue)
     }
+    
 }

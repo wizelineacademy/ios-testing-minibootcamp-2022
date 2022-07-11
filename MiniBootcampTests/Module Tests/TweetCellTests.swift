@@ -5,10 +5,12 @@
 //  Created by Juan David Torres on 17/06/22.
 //
 
+
 import XCTest
 @testable import MiniBootcamp
 
 class TweetCellTests: XCTestCase {
+<<<<<<< Updated upstream
 
     
     var sut: TweetCell!
@@ -16,12 +18,24 @@ class TweetCellTests: XCTestCase {
     override func setUp() {
         super.setUp()
         sut = TweetCell()
+=======
+    
+    var sut: TweetTableViewCell!
+    
+    override func setUp() {
+        super.setUp()
+        sut = TweetTableViewCell()
+>>>>>>> Stashed changes
     }
     
     func testCellIsNotNil() {
         // Given
         // system under test
+<<<<<<< Updated upstream
         let sut = TweetCell()
+=======
+        let sut = TweetTableViewCell()
+>>>>>>> Stashed changes
         
         // When
         
@@ -56,7 +70,11 @@ class TweetCellTests: XCTestCase {
     
     func testusernameLabel_initialConfiguration() {
         // Given
+<<<<<<< Updated upstream
         let font = UIFont.bold(withSize: .username)
+=======
+        let font = UIFont.normal(withSize: .username)
+>>>>>>> Stashed changes
         let textColor = UIColor.systemGray
         
         //Then
@@ -77,7 +95,11 @@ class TweetCellTests: XCTestCase {
     }
     
     func testAllSubviewsAreAddedAsSubviews() {
+<<<<<<< Updated upstream
         XCTAssertEqual(sut.subviews.count, 4)
+=======
+        XCTAssertEqual(sut.contentView.subviews.count, 2)
+>>>>>>> Stashed changes
     }
     
     

@@ -10,4 +10,6 @@ import UIKit
 
 protocol ViewControllerFactory {
     func feedViewController() -> UIViewController
+    func detailViewController( tweetViewModel: TweetViewModel, userViewModel: UserViewModel, userImage: UIImage) -> UIViewController
+//    func composeViewController(_ coordinator: MainCoordinator) -> UIViewController
 }

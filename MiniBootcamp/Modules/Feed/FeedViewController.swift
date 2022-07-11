@@ -17,6 +17,8 @@ class FeedViewController: UIViewController, UITableViewDataSource, UITableViewDe
     var fetchedImages:[URL:UIImage] = [:]
     private var listTweets: [TweetViewModel] = []
     let activityIndicator = UIActivityIndicatorView(style: .large)
+    var coordinator: MainCoordinator?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         configureUI()
@@ -24,8 +26,9 @@ class FeedViewController: UIViewController, UITableViewDataSource, UITableViewDe
     }
     
     
+    
     private func configureUI() {
-        view.backgroundColor = .white
+        view.backgroundColor = .systemBackground
 
         configureNavigation()
         configureMenuButton()
@@ -33,16 +36,11 @@ class FeedViewController: UIViewController, UITableViewDataSource, UITableViewDe
         configureActivityIndicatorView()
     }
     
-    @objc func addTapped() {
-        
-    }
-    
     private func configureNavigation() {
         self.navigationItem.title = "WizeTweet"
         navigationController?.navigationBar.titleTextAttributes = [.foregroundColor: UIColor.white]
         navigationController?.navigationBar.barTintColor = UIColor.redMain
         navigationController?.navigationBar.backgroundColor = UIColor.redMain
-        navigationController?.setStatusBar(backgroundColor: UIColor.redMain)
         navigationController?.navigationBar.isTranslucent = false
     }
     
@@ -51,7 +49,7 @@ class FeedViewController: UIViewController, UITableViewDataSource, UITableViewDe
         let menuBtn = UIButton(type: .custom)
         menuBtn.frame = CGRect(x: 0.0, y: 0.0, width: 20, height: 20)
         menuBtn.setImage(UIImage(named:"plus-2"), for: .normal)
-        menuBtn.addTarget(self, action: #selector(addTapped), for: UIControl.Event.touchUpInside)
+//        menuBtn.addTarget(self, action: #selector(), for: UIControl.Event.touchUpInside)
         //Configuration
         let menuBarItem = UIBarButtonItem(customView: menuBtn)
         let currWidth = menuBarItem.customView?.widthAnchor.constraint(equalToConstant: 24)
@@ -91,7 +89,6 @@ class FeedViewController: UIViewController, UITableViewDataSource, UITableViewDe
         ])
         activityIndicator.startAnimating()
     }
-    
     func fetchTweets() {
         TweetTimelineAPI().load(.timeline) { result in
             switch(result) {
@@ -122,7 +119,12 @@ class FeedViewController: UIViewController, UITableViewDataSource, UITableViewDe
         }
     }
     
-    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let tweetViewModel = tweetsViewModel?.tweetAtIndex(index: indexPath.row)
+        let userViewModel = UserViewModel(tweetViewModel!.user)
+        
+        coordinator?.showDetailTweet(tweetViewModel: tweetViewModel!, userViewModel: userViewModel, userImage: fetchedImages[userViewModel.profileImageURL!] ?? UIImage(named: "gato")!)
+    }
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return tweetsViewModel?.numberOfRows ?? 0
     }

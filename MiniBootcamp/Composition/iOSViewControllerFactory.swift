@@ -11,7 +11,16 @@ import UIKit
 class iOSViewControllerFactory: ViewControllerFactory {
     
     func feedViewController() -> UIViewController {
-        FeedViewController()
+       
+        return FeedViewController()
+    
     }
     
+    func detailViewController( tweetViewModel: TweetViewModel, userViewModel: UserViewModel, userImage: UIImage) -> UIViewController{
+        DetailViewController(tweetViewModel, userViewModel, userImage)
+    }
+//
+//    func composeViewController(_ coordinator: MainCoordinator) -> UIViewController {
+//        ComposeViewController(coordinator)
+//    }
 }

@@ -18,6 +18,9 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         // If using a storyboard, the `window` property will automatically be initialized and attached to the scene.
         // This delegate does not imply the connecting scene or session are new (see `application:configurationForConnectingSceneSession` instead).
         guard let winScene = (scene as? UIWindowScene) else { return }
+        let statusBarFrame = winScene.statusBarManager?.statusBarFrame ?? CGRect.zero
+        let statusBarView = UIView(frame: statusBarFrame)
+        statusBarView.backgroundColor = .redMain
         //Create a window that is the same size as the screen
         window = UIWindow(windowScene: winScene)
         // Create a view controller
