@@ -78,6 +78,7 @@ class FeedViewController: UIViewController, UITableViewDataSource, UITableViewDe
             tableView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
             tableView.trailingAnchor.constraint(equalTo: view.trailingAnchor)
         ])
+
     }
     
     private func configureActivityIndicatorView() {
