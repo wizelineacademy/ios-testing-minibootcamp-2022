@@ -19,6 +19,7 @@ class FeedViewController: UIViewController, UITableViewDataSource, UITableViewDe
     let activityIndicator = UIActivityIndicatorView(style: .large)
     var coordinator: MainCoordinator?
     
+
     override func viewDidLoad() {
         super.viewDidLoad()
         configureUI()
@@ -33,6 +34,7 @@ class FeedViewController: UIViewController, UITableViewDataSource, UITableViewDe
         configureMenuButton()
         configureTableView()
         configureActivityIndicatorView()
+
     }
     
 

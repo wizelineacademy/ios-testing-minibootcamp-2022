@@ -6,6 +6,7 @@
 //
 
 
+
 import XCTest
 @testable import MiniBootcamp
 
@@ -18,6 +19,7 @@ class TweetCellTests: XCTestCase {
     override func setUp() {
         super.setUp()
         sut = TweetTableViewCell()
+
 
     }
     
@@ -58,6 +60,7 @@ class TweetCellTests: XCTestCase {
     }
     
     func testusernameLabel_initialConfiguration() {
+
         
         let textColor = UIColor.label
         let font = UIFont.normal(withSize: .username)
@@ -80,6 +83,7 @@ class TweetCellTests: XCTestCase {
     }
     
     func testAllSubviewsAreAddedAsSubviews() {
+
 
         XCTAssertEqual(sut.contentView.subviews.count, 2)
 
