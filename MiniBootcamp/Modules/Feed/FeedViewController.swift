@@ -17,6 +17,8 @@ class FeedViewController: UIViewController, UITableViewDataSource, UITableViewDe
     var fetchedImages:[URL:UIImage] = [:]
     private var listTweets: [TweetViewModel] = []
     let activityIndicator = UIActivityIndicatorView(style: .large)
+    var coordinator: MainCoordinator?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         configureUI()
@@ -121,6 +123,11 @@ class FeedViewController: UIViewController, UITableViewDataSource, UITableViewDe
         }
     }
     
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let tweetViewModel = tweetsViewModel?.tweetAtIndex(index: indexPath.row)
+        let userViewModel = UserViewModel(tweetViewModel!.user)
+        coordinator?.showDetail(tweetViewModel: tweetViewModel!, userViewModel: userViewModel, userImage: fetchedImages[userViewModel.profileImageURL!] ?? UIImage(named: "gato")!)
+    }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return tweetsViewModel?.numberOfRows ?? 0

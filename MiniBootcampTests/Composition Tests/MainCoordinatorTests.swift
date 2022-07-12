@@ -36,6 +36,10 @@ class MainCoordinatorTests: XCTestCase {
 
 // MARK: - Stubs
 private class StubFactory: ViewControllerFactory {
+    func detailViewController(tweetViewModel: TweetViewModel, userViewModel: UserViewModel, userImage: UIImage) -> UIViewController {
+        return DetailViewController(tweetViewModel, userViewModel, userImage)
+    }
+    
     func feedViewController() -> UIViewController {
         return FeedViewController()
     }

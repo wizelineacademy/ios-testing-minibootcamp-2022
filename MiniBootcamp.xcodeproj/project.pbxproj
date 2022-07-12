@@ -13,6 +13,7 @@
 		5922B10328595AFB004CD5F5 /* TweetListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5922B10228595AFB004CD5F5 /* TweetListViewModel.swift */; };
 		5922B107285968BD004CD5F5 /* UserViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5922B106285968BD004CD5F5 /* UserViewModel.swift */; };
 		59570B232867D563004863EE /* UIImageViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59570B222867D563004863EE /* UIImageViewExtension.swift */; };
+		5982960B287D052F00DB8BE8 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5982960A287D052F00DB8BE8 /* DetailViewController.swift */; };
 		59D2B0A82854104A0068A860 /* ComposeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59D2B0A72854104A0068A860 /* ComposeViewController.swift */; };
 		59D2B0AA285417C10068A860 /* TimelineAPITest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59D2B0A9285417C10068A860 /* TimelineAPITest.swift */; };
 		59D2B0AC28541D300068A860 /* ComposeAPITest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59D2B0AB28541D300068A860 /* ComposeAPITest.swift */; };
@@ -64,6 +65,7 @@
 		5922B10228595AFB004CD5F5 /* TweetListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TweetListViewModel.swift; sourceTree = "<group>"; };
 		5922B106285968BD004CD5F5 /* UserViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserViewModel.swift; sourceTree = "<group>"; };
 		59570B222867D563004863EE /* UIImageViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageViewExtension.swift; sourceTree = "<group>"; };
+		5982960A287D052F00DB8BE8 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		59D2B0A72854104A0068A860 /* ComposeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComposeViewController.swift; sourceTree = "<group>"; };
 		59D2B0A9285417C10068A860 /* TimelineAPITest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimelineAPITest.swift; sourceTree = "<group>"; };
 		59D2B0AB28541D300068A860 /* ComposeAPITest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComposeAPITest.swift; sourceTree = "<group>"; };
@@ -127,6 +129,14 @@
 				5922B106285968BD004CD5F5 /* UserViewModel.swift */,
 			);
 			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		59829609287D051A00DB8BE8 /* Detail */ = {
+			isa = PBXGroup;
+			children = (
+				5982960A287D052F00DB8BE8 /* DetailViewController.swift */,
+			);
+			path = Detail;
 			sourceTree = "<group>";
 		};
 		59D2B0A62854102D0068A860 /* Compose */ = {
@@ -226,6 +236,7 @@
 		9A02091D281882BF007B47CE /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				59829609287D051A00DB8BE8 /* Detail */,
 				59D2B0A62854102D0068A860 /* Compose */,
 				9A02091E281882BF007B47CE /* Feed */,
 			);
@@ -419,6 +430,7 @@
 				9AD21A7B281AF3BE00A33F05 /* UIViewExtensions.swift in Sources */,
 				59D2B0A82854104A0068A860 /* ComposeViewController.swift in Sources */,
 				9A02092B281882BF007B47CE /* FeedViewController.swift in Sources */,
+				5982960B287D052F00DB8BE8 /* DetailViewController.swift in Sources */,
 				5922B0FC28593F39004CD5F5 /* UINavigationExtensions.swift in Sources */,
 				9A020923281882BF007B47CE /* Tweet.swift in Sources */,
 				59570B232867D563004863EE /* UIImageViewExtension.swift in Sources */,
