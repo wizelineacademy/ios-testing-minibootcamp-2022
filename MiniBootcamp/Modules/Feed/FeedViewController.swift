@@ -25,7 +25,7 @@ class FeedViewController: UIViewController, UITableViewDataSource, UITableViewDe
     
     
     private func configureUI() {
-        view.backgroundColor = .white
+        view.backgroundColor = .systemBackground
 
         configureNavigation()
         configureMenuButton()
