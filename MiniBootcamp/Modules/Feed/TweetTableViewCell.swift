@@ -16,7 +16,7 @@ class TweetTableViewCell: UITableViewCell {
     var userImage: UIImage?
     //View Pragmatically
     let userImageView: UIImageView = create {
-//        $0.image = UIImage(.gato)
+        $0.image = UIImage(.gato)
         $0.layer.cornerRadius = 25
         $0.clipsToBounds = true
         $0.contentMode = .scaleAspectFit
@@ -29,6 +29,8 @@ class TweetTableViewCell: UITableViewCell {
     
     let usernameLabel: UILabel = create {
         $0.font = UIFont.normal(withSize: .username)
+        $0.textColor = UIColor.label
+        $0.numberOfLines = 1
     }
     
     let contentLabel: UILabel = create {
@@ -95,11 +97,12 @@ class TweetTableViewCell: UITableViewCell {
         self.tweetViewModel = tweetViewModel
         self.userViewModel = userViewModel
         self.userImage = userImage
-        configureUI()
+        
     }
     
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
+        configureUI()
     }
     
     required init?(coder: NSCoder) {
@@ -107,6 +110,7 @@ class TweetTableViewCell: UITableViewCell {
     }
     
     private func configureUI() {
+        self.backgroundColor = .systemBackground
         userImageView.image = self.userImage
         
         configureViewModels()

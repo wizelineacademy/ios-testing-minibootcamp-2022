@@ -5,39 +5,91 @@
 //  Created by Juan David Torres on 17/06/22.
 //
 
+
 import XCTest
 @testable import MiniBootcamp
 
 class TweetCellTests: XCTestCase {
 
-    func testCellIsNotNil()  {
-        //Given
+
+    
+    var sut: TweetTableViewCell!
+    
+    override func setUp() {
+        super.setUp()
+        sut = TweetTableViewCell()
+
+    }
+    
+    func testCellIsNotNil() {
+        // Given
+        // system under test
         let sut = TweetTableViewCell()
-        //When
-        //Then
+        
+        // When
+        
+        // Then
         XCTAssertNotNil(sut)
+        
     }
-    override func setUpWithError() throws {
-        // Put setup code here. This method is called before the invocation of each test method in the class.
+    
+    func testBackgroundIsSystem() {
+        let systemBackground = UIColor.systemBackground
+        XCTAssertEqual(sut.backgroundColor, systemBackground)
     }
+    
+    func testuserImageView_initialConfiguration() {
+        let defaultThumb = UIImage(.gato)
+        XCTAssertEqual(sut.userImageView.layer.cornerRadius, 25)
+        XCTAssertTrue(sut.userImageView.clipsToBounds)
+        XCTAssertEqual(sut.userImageView.image, defaultThumb)
+    }
+    
+    func testNameLabel_initialConfiguration() {
+        // Given
+        let font = UIFont.bold(withSize: .name)
+        let textColor = UIColor.label
+        
+        //Then
+        XCTAssertEqual(sut.nameLabel.font, font)
+        XCTAssertEqual(sut.nameLabel.numberOfLines, 1)
+        XCTAssertTrue(sut.nameLabel.adjustsFontSizeToFitWidth)
+        XCTAssertEqual(sut.nameLabel.textColor, textColor)
+    }
+    
+    func testusernameLabel_initialConfiguration() {
+        
+        let textColor = UIColor.label
+        let font = UIFont.normal(withSize: .username)
+        
+        //Then
+        XCTAssertEqual(sut.usernameLabel.font, font)
+        XCTAssertEqual(sut.usernameLabel.numberOfLines, 1)
+        XCTAssertEqual(sut.usernameLabel.textColor, textColor)
+    }
+    
+    func testContentLabel_initialConfiguration() {
+        // Given
+        let font = UIFont.normal(withSize: .content)
+        let textColor = UIColor.label
+        
+        //Then
+        XCTAssertEqual(sut.contentLabel.font, font)
+        XCTAssertEqual(sut.contentLabel.numberOfLines, 0)
+        XCTAssertEqual(sut.contentLabel.textColor, textColor)
+    }
+    
+    func testAllSubviewsAreAddedAsSubviews() {
 
-    override func tearDownWithError() throws {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
-    }
+        XCTAssertEqual(sut.contentView.subviews.count, 2)
 
-    func testExample() throws {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
-        // Any test you write for XCTest can be annotated as throws and async.
-        // Mark your test throws to produce an unexpected failure when your test encounters an uncaught error.
-        // Mark your test async to allow awaiting for asynchronous code to complete. Check the results with assertions afterwards.
     }
-
-    func testPerformanceExample() throws {
-        // This is an example of a performance test case.
-        self.measure {
-            // Put the code you want to measure the time of here.
-        }
+    
+    
+    override func tearDown() {
+        super.tearDown()
+        sut = nil
     }
-
+    
+    
 }

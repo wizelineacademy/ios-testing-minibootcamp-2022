@@ -35,9 +35,7 @@ class FeedViewController: UIViewController, UITableViewDataSource, UITableViewDe
         configureActivityIndicatorView()
     }
     
-    @objc func addTapped() {
-        
-    }
+
     
     private func configureNavigation() {
         self.navigationItem.title = "WizeTweet"
@@ -53,7 +51,7 @@ class FeedViewController: UIViewController, UITableViewDataSource, UITableViewDe
         let menuBtn = UIButton(type: .custom)
         menuBtn.frame = CGRect(x: 0.0, y: 0.0, width: 20, height: 20)
         menuBtn.setImage(UIImage(named:"plus-2"), for: .normal)
-        menuBtn.addTarget(self, action: #selector(addTapped), for: UIControl.Event.touchUpInside)
+//        menuBtn.addTarget(self, action: #selector(addTapped), for: UIControl.Event.touchUpInside)
         //Configuration
         let menuBarItem = UIBarButtonItem(customView: menuBtn)
         let currWidth = menuBarItem.customView?.widthAnchor.constraint(equalToConstant: 24)

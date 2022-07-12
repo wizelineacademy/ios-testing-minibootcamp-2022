@@ -38,7 +38,7 @@ class MainCoordinatorTests: XCTestCase {
         let sut = makeSUT(nv: UINavigationController(), factory: StubFactory())
         sut.start()
         sut.showDetail(tweetViewModel:self.sut_tweetvm! , userViewModel: self.sut_uservm!, userImage: UIImage(named: "gato")!)
-        let detailVC = sut.rootViewController.topViewController as! DetailViewController
+        let detailVC = sut.rootViewController.topViewController as! FeedViewController
         
         XCTAssertNotNil(detailVC)
     }

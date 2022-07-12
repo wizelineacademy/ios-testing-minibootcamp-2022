@@ -14,6 +14,8 @@
 		5922B107285968BD004CD5F5 /* UserViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5922B106285968BD004CD5F5 /* UserViewModel.swift */; };
 		59570B232867D563004863EE /* UIImageViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59570B222867D563004863EE /* UIImageViewExtension.swift */; };
 		5982960B287D052F00DB8BE8 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5982960A287D052F00DB8BE8 /* DetailViewController.swift */; };
+		5982960D287D0DA400DB8BE8 /* UserViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5982960C287D0DA400DB8BE8 /* UserViewModelTests.swift */; };
+		5982960F287D0DE200DB8BE8 /* DetailViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5982960E287D0DE200DB8BE8 /* DetailViewControllerTests.swift */; };
 		59D2B0A82854104A0068A860 /* ComposeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59D2B0A72854104A0068A860 /* ComposeViewController.swift */; };
 		59D2B0AA285417C10068A860 /* TimelineAPITest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59D2B0A9285417C10068A860 /* TimelineAPITest.swift */; };
 		59D2B0AC28541D300068A860 /* ComposeAPITest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59D2B0AB28541D300068A860 /* ComposeAPITest.swift */; };
@@ -66,6 +68,8 @@
 		5922B106285968BD004CD5F5 /* UserViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserViewModel.swift; sourceTree = "<group>"; };
 		59570B222867D563004863EE /* UIImageViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageViewExtension.swift; sourceTree = "<group>"; };
 		5982960A287D052F00DB8BE8 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		5982960C287D0DA400DB8BE8 /* UserViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserViewModelTests.swift; sourceTree = "<group>"; };
+		5982960E287D0DE200DB8BE8 /* DetailViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewControllerTests.swift; sourceTree = "<group>"; };
 		59D2B0A72854104A0068A860 /* ComposeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComposeViewController.swift; sourceTree = "<group>"; };
 		59D2B0A9285417C10068A860 /* TimelineAPITest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimelineAPITest.swift; sourceTree = "<group>"; };
 		59D2B0AB28541D300068A860 /* ComposeAPITest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComposeAPITest.swift; sourceTree = "<group>"; };
@@ -151,6 +155,7 @@
 			isa = PBXGroup;
 			children = (
 				59DC0B26285BE2800021AB95 /* TweetViewModelTests.swift */,
+				5982960C287D0DA400DB8BE8 /* UserViewModelTests.swift */,
 			);
 			path = "View Models";
 			sourceTree = "<group>";
@@ -268,6 +273,7 @@
 				59D2B0A9285417C10068A860 /* TimelineAPITest.swift */,
 				59D2B0AB28541D300068A860 /* ComposeAPITest.swift */,
 				59DC0B28285CD5770021AB95 /* TweetCellTests.swift */,
+				5982960E287D0DE200DB8BE8 /* DetailViewControllerTests.swift */,
 			);
 			path = "Module Tests";
 			sourceTree = "<group>";
@@ -447,6 +453,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9A02093F281882D9007B47CE /* iOSViewControllerFactoryTests.swift in Sources */,
+				5982960D287D0DA400DB8BE8 /* UserViewModelTests.swift in Sources */,
 				59D2B0AA285417C10068A860 /* TimelineAPITest.swift in Sources */,
 				59D2B0AC28541D300068A860 /* ComposeAPITest.swift in Sources */,
 				9AAF3B692822F7D900A679CA /* ObserverTests.swift in Sources */,
@@ -456,6 +463,7 @@
 				9A02093D281882D9007B47CE /* FeedViewControllerTests.swift in Sources */,
 				9A020946281882D9007B47CE /* StaticFuncsTests.swift in Sources */,
 				9A020941281882D9007B47CE /* UserModelTests.swift in Sources */,
+				5982960F287D0DE200DB8BE8 /* DetailViewControllerTests.swift in Sources */,
 				9A02093E281882D9007B47CE /* MainCoordinatorTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
