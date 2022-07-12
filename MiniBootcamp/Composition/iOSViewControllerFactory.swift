@@ -14,4 +14,8 @@ class iOSViewControllerFactory: ViewControllerFactory {
         FeedViewController()
     }
     
+    func detailViewController(tweetViewModel: TweetViewModel, userViewModel:UserViewModel, userImage: UIImage) -> UIViewController {
+        return DetailViewController(tweetViewModel, userViewModel, userImage)
+    }
+    
 }

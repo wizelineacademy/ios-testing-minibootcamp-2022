@@ -19,7 +19,13 @@ class MainCoordinator: Coordinator {
     }
     
     func start() {
-        rootViewController.pushViewController(viewControllerFactory.feedViewController(), animated: false)
+        let feedVC = viewControllerFactory.feedViewController() as! FeedViewController
+        feedVC.coordinator = self
+        rootViewController.pushViewController(feedVC, animated: false)
     }
     
+    func showDetail(tweetViewModel: TweetViewModel, userViewModel:UserViewModel, userImage: UIImage) {
+        rootViewController.pushViewController(viewControllerFactory.detailViewController(tweetViewModel: tweetViewModel, userViewModel: userViewModel, userImage: userImage), animated: true)
+        
+    }
 }

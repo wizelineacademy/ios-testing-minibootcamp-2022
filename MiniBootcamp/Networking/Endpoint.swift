@@ -26,6 +26,7 @@ extension Endpoint {
         case .timeline:
             let url = URL(string: Endpoint.baseURL + string)!
             return URLRequest(url: url)
+        
         }
     }
 }

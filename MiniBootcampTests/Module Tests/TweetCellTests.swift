@@ -1,26 +1,30 @@
 //
-//  TweetCellTests.swift
+//  TweetTableViewCellTests.swift
 //  MiniBootcampTests
 //
-//  Created by Abner Castro on 14/06/22.
+//  Created by Juan David Torres on 17/06/22.
 //
+
 
 import XCTest
 @testable import MiniBootcamp
 
 class TweetCellTests: XCTestCase {
+
+
     
-    var sut: TweetCell!
+    var sut: TweetTableViewCell!
     
     override func setUp() {
         super.setUp()
-        sut = TweetCell()
+        sut = TweetTableViewCell()
+
     }
     
     func testCellIsNotNil() {
         // Given
         // system under test
-        let sut = TweetCell()
+        let sut = TweetTableViewCell()
         
         // When
         
@@ -54,9 +58,9 @@ class TweetCellTests: XCTestCase {
     }
     
     func testusernameLabel_initialConfiguration() {
-        // Given
-        let font = UIFont.bold(withSize: .username)
-        let textColor = UIColor.systemGray
+        
+        let textColor = UIColor.label
+        let font = UIFont.normal(withSize: .username)
         
         //Then
         XCTAssertEqual(sut.usernameLabel.font, font)
@@ -76,7 +80,9 @@ class TweetCellTests: XCTestCase {
     }
     
     func testAllSubviewsAreAddedAsSubviews() {
-        XCTAssertEqual(sut.subviews.count, 4)
+
+        XCTAssertEqual(sut.contentView.subviews.count, 2)
+
     }
     
     

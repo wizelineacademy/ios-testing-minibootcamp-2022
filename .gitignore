@@ -1,8 +1,7 @@
-# Xcode
+#XCode
 
-## User settings
+#User data
 xcuserdata/
 
-# OS
+#DS
 .DS_Store
-
