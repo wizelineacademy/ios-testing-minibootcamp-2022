@@ -44,12 +44,6 @@
 		9A020944281882D9007B47CE /* tweetFake.json in Resources */ = {isa = PBXBuildFile; fileRef = 9A02093A281882D9007B47CE /* tweetFake.json */; };
 		9A020945281882D9007B47CE /* userFake.json in Resources */ = {isa = PBXBuildFile; fileRef = 9A02093B281882D9007B47CE /* userFake.json */; };
 		9A020946281882D9007B47CE /* StaticFuncsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A02093C281882D9007B47CE /* StaticFuncsTests.swift */; };
-		9A31C4FC2859382D00BCEFD5 /* TweetCellTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A31C4FB2859382D00BCEFD5 /* TweetCellTests.swift */; };
-		9A31C4FE28593A8E00BCEFD5 /* TweetCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A31C4FD28593A8E00BCEFD5 /* TweetCell.swift */; };
-		9A31C50028593FC400BCEFD5 /* UIImageExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A31C4FF28593FC400BCEFD5 /* UIImageExtension.swift */; };
-		9A3AC4FD286B5A5A0027AF05 /* TweetMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A3AC4FC286B5A5A0027AF05 /* TweetMock.swift */; };
-		9A3AC4FF286B5AC60027AF05 /* UserMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A3AC4FE286B5AC60027AF05 /* UserMock.swift */; };
-		9A5ED04D28627D4600B5AAF3 /* TweetTimelineAPITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A5ED04C28627D4600B5AAF3 /* TweetTimelineAPITests.swift */; };
 		9A64D3462822E34400D54132 /* UIFontExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A64D3452822E34400D54132 /* UIFontExtensions.swift */; };
 		9AAF3B692822F7D900A679CA /* ObserverTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AAF3B682822F7D900A679CA /* ObserverTests.swift */; };
 		9AAF3B6B2822F7F300A679CA /* Observer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AAF3B6A2822F7F300A679CA /* Observer.swift */; };
@@ -107,12 +101,6 @@
 		9A02093A281882D9007B47CE /* tweetFake.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = tweetFake.json; sourceTree = "<group>"; };
 		9A02093B281882D9007B47CE /* userFake.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = userFake.json; sourceTree = "<group>"; };
 		9A02093C281882D9007B47CE /* StaticFuncsTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StaticFuncsTests.swift; sourceTree = "<group>"; };
-		9A31C4FB2859382D00BCEFD5 /* TweetCellTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TweetCellTests.swift; sourceTree = "<group>"; };
-		9A31C4FD28593A8E00BCEFD5 /* TweetCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TweetCell.swift; sourceTree = "<group>"; };
-		9A31C4FF28593FC400BCEFD5 /* UIImageExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageExtension.swift; sourceTree = "<group>"; };
-		9A3AC4FC286B5A5A0027AF05 /* TweetMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TweetMock.swift; sourceTree = "<group>"; };
-		9A3AC4FE286B5AC60027AF05 /* UserMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserMock.swift; sourceTree = "<group>"; };
-		9A5ED04C28627D4600B5AAF3 /* TweetTimelineAPITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TweetTimelineAPITests.swift; sourceTree = "<group>"; };
 		9A64D3452822E34400D54132 /* UIFontExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIFontExtensions.swift; sourceTree = "<group>"; };
 		9AAF3B682822F7D900A679CA /* ObserverTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObserverTests.swift; sourceTree = "<group>"; };
 		9AAF3B6A2822F7F300A679CA /* Observer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Observer.swift; sourceTree = "<group>"; };
@@ -264,7 +252,6 @@
 			isa = PBXGroup;
 			children = (
 				9A02091F281882BF007B47CE /* FeedViewController.swift */,
-
 				5922B0FD28594B12004CD5F5 /* TweetTableViewCell.swift */,
 			);
 			path = Feed;
@@ -305,8 +292,6 @@
 			children = (
 				9A020934281882D9007B47CE /* TweetModelTests.swift */,
 				9A020935281882D9007B47CE /* UserModelTests.swift */,
-				9A3AC4FC286B5A5A0027AF05 /* TweetMock.swift */,
-				9A3AC4FE286B5AC60027AF05 /* UserMock.swift */,
 			);
 			path = "Model Tests";
 			sourceTree = "<group>";
@@ -320,14 +305,6 @@
 				9AAF3B682822F7D900A679CA /* ObserverTests.swift */,
 			);
 			path = "Utility Tests";
-			sourceTree = "<group>";
-		};
-		9A5ED04B28627D3200B5AAF3 /* Networking */ = {
-			isa = PBXGroup;
-			children = (
-				9A5ED04C28627D4600B5AAF3 /* TweetTimelineAPITests.swift */,
-			);
-			path = Networking;
 			sourceTree = "<group>";
 		};
 		9AD21A79281AF39100A33F05 /* Extensions */ = {
@@ -448,9 +425,7 @@
 				5922B107285968BD004CD5F5 /* UserViewModel.swift in Sources */,
 				9AAF3B6B2822F7F300A679CA /* Observer.swift in Sources */,
 				9A020924281882BF007B47CE /* User.swift in Sources */,
-				9A31C4FE28593A8E00BCEFD5 /* TweetCell.swift in Sources */,
 				9A64D3462822E34400D54132 /* UIFontExtensions.swift in Sources */,
-				9A31C50028593FC400BCEFD5 /* UIImageExtension.swift in Sources */,
 				9A02092D281882BF007B47CE /* UIColorExtensions.swift in Sources */,
 				5922B0FE28594B12004CD5F5 /* TweetTableViewCell.swift in Sources */,
 				9A020927281882BF007B47CE /* ViewControllerFactory.swift in Sources */,
@@ -485,9 +460,6 @@
 				59DC0B29285CD5770021AB95 /* TweetCellTests.swift in Sources */,
 				59DC0B27285BE2800021AB95 /* TweetViewModelTests.swift in Sources */,
 				9A020940281882D9007B47CE /* TweetModelTests.swift in Sources */,
-				9A31C4FC2859382D00BCEFD5 /* TweetCellTests.swift in Sources */,
-				9A5ED04D28627D4600B5AAF3 /* TweetTimelineAPITests.swift in Sources */,
-				9A3AC4FD286B5A5A0027AF05 /* TweetMock.swift in Sources */,
 				9A02093D281882D9007B47CE /* FeedViewControllerTests.swift in Sources */,
 				9A020946281882D9007B47CE /* StaticFuncsTests.swift in Sources */,
 				9A020941281882D9007B47CE /* UserModelTests.swift in Sources */,
